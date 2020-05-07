@@ -1,0 +1,108 @@
+0,HABLAME ^ SOBRE LA UNIVERSIDAD DE VIGO ^,*,*,<srai>PREG1</srai>,asistente.aiml
+0,CUENTAME ^ SOBRE LA UNIVERSIDAD DE VIGO ^,*,*,<srai>PREG1</srai>,asistente.aiml
+0,QUE ME DICES ^ DE LA UNIVERSIDAD DE VIGO ^,*,*,<srai>PREG1</srai>,asistente.aiml
+0,PUEDES HABLARME ^ DE LA UNIVERSIDAD DE VIGO ^,*,*,<srai>PREG1</srai>,asistente.aiml
+0,QUE SABES ^ SOBRE LA UNIVERSIDAD DE VIGO ^,*,*,<srai>PREG1</srai>,asistente.aiml
+0,^ QUE ES LA UNIVERSIDAD DE VIGO ^,*,*,<srai>PREG1</srai>,asistente.aiml
+0,PREG1,*,*,La Universidad de Vigo es una institución universitaria#Comma compuesta de 3 campus: #Newline-Campus del Agua#Newline-Campus CREA#Newline-Campus Vigo tecnológico,asistente.aiml
+0,^ DONDE * LA <SET>ESEI</SET>,*,*,<srai>PREG2</srai>,asistente.aiml
+0,^ LA UBICACION DE LA <SET>ESEI</SET> ^,*,*,<srai>PREG2</srai>,asistente.aiml
+0,^ LA LOCALIZACION DE LA <SET>ESEI</SET> ^,*,*,<srai>PREG2</srai>,asistente.aiml
+0,$SABES LA DIRECCION DE LA <SET>ESEI</SET>,*,*,<srai>PREG2</srai>,asistente.aiml
+0,$ME INDICAS DONDE ESTA LA <SET>ESEI</SET>,*,*,<srai>PREG2</srai>,asistente.aiml
+0,$EN QUE ZONA DEL CAMPUS DE OURENSE SE ENCUENTRA LA <SET>ESEI</SET>,*,*,<srai>PREG2</srai>,asistente.aiml
+0,PREG2,*,*,La ESEI está en el Edificio Politécnico del Campus de Ourense,asistente.aiml
+0,^ ESTUDIAR EN LA <SET>ESEI</SET>,*,*,<srai>PREG3</srai>,asistente.aiml
+0,^ QUE ASIGNATURAS * LA <SET>ESEI</SET>,*,*,<srai>PREG3</srai>,asistente.aiml
+0,^ QUE TITULACIONES * LA <SET>ESEI</SET> ^,*,*,<srai>PREG3</srai>,asistente.aiml
+0,^ CUANTOS TITULOS * LA <SET>ESEI</SET>,*,*,<srai>PREG3</srai>,asistente.aiml
+0,^ CUALES SON LAS CARRERAS ^ LA <SET>ESEI</SET>,*,*,<srai>PREG3</srai>,asistente.aiml
+0,PREG3,*,*,En la ESEI puedes estudiar Ingeniería Informática. También puedes estudiar Administración y Dirección de empresas junto a II si optas por el doble grado.,asistente.aiml
+0,^ LA PENA ESTUDIAR EN LA <SET>ESEI</SET>,*,*,<srai>PREG4</srai>,asistente.aiml
+0,QUE ^ ATRACTIVO ESTUDIAR EN LA <SET>ESEI</SET>,*,*,<srai>PREG4</srai>,asistente.aiml
+0,ES MEJOR ESTUDIAR EN LA <SET>ESEI</SET> QUE EN OTROS CENTROS,*,*,<srai>PREG4</srai>,asistente.aiml
+0,QUE OFRECE LA <SET>ESEI</SET> PARA QUERER ESTUDIAR EN ELLA,*,*,<srai>PREG4</srai>,asistente.aiml
+0,PREG4,*,*,La ESEI ha recibido varios sellos de calidad#Comma como el Euro-Inf. Además#Comma la carrera de informática tiene una demanda de empleo muy alta.,asistente.aiml
+0,HAY UNA CAFETERIA EN LA <SET>ESEI</SET>,*,*,<srai>PREG5</srai>,asistente.aiml
+0,$PUEDO DESAYUNAR DENTRO DE LA <SET>ESEI</SET> EN ALGUN ESPACIO,*,*,<srai>PREG5</srai>,asistente.aiml
+0,$DONDE PUEDO COMER CALIENTE EN LA <SET>ESEI</SET>,*,*,<srai>PREG5</srai>,asistente.aiml
+0,$EXISTE UN LOCAL EN LA <SET>ESEI</SET> DONDE PUEDA TOMAR UN REFRESCO,*,*,<srai>PREG5</srai>,asistente.aiml
+0,^ LA <SET>ESEI</SET> ^ UNA CAFETERIA,*,*,<srai>PREG5</srai>,asistente.aiml
+0,^ CAFETERIA ^,*,*,<srai>PREG5</srai>,asistente.aiml
+0,PREG5,*,*,La ESEI tiene una cafeteria que está ubicada en la planta baja.,asistente.aiml
+0,DONDE ^ SECRETARIA ^,*,*,<srai>PREG6</srai>,asistente.aiml
+0,^ SECRETARIA ^,*,*,<srai>PREG6</srai>,asistente.aiml
+0,^ REALIZAR ^ TRAMITES ADMINISTRATIVOS ^,*,*,<srai>PREG6</srai>,asistente.aiml
+0,PREG6,*,*,Secretaría se encuentra en la planta baja de la ESEI cerca del péndulo.,asistente.aiml
+0,^ HORARIO ^ SECRETARIA ^,*,*,<srai>PREG7</srai>,asistente.aiml
+0,HORARIO ^ SECRETARIA ^,*,*,<srai>PREG7</srai>,asistente.aiml
+0,PUEDO COMPLETAR MI MATRICULA POR LA TARDE,*,*,<srai>PREG7</srai>,asistente.aiml
+0,A QUE HORAS PUEDO IR A LA SECRETARIA A PREGUNTAR POR MI MATRICULA,*,*,<srai>PREG7</srai>,asistente.aiml
+0,SI QUIERO MODIFICAR MI MATRICULA CUANDO PUEDO REALIZARLO,*,*,<srai>PREG7</srai>,asistente.aiml
+0,PREG7,*,*,El horario de atención al público: lunes a vienres#Comma de 9:00 a 14:00 h.,asistente.aiml
+0,$EN QUE CONSISTE EL PAT,*,*,<srai>PREG8</srai>,asistente.aiml
+0,QUE ^ PAT ^,*,*,<srai>PREG8</srai>,asistente.aiml
+0,QUE ^ PLAN DE ACCION TITORIAL ^,*,*,<srai>PREG8</srai>,asistente.aiml
+0,PREG8,*,*,El PAT (Plan de Acción Titorial) de la ESEI es un programa de atención personalizada dirigido al alumnado de nuevo ingreso.,asistente.aiml
+0,CUAL ES EL PROTOCOLO DE ACOGIDA DE ALUMNOS CON NECESIDADES EDUCATIVAS ESPECIALES,*,*,<srai>PREG9</srai>,asistente.aiml
+0,* NECESIDADES EDUCATIVAS ESPECIALES ^,*,*,<srai>PREG9</srai>,asistente.aiml
+0,^ ACOGIDA ^ NECESIDADES EDUCATIVAS ^,*,*,<srai>PREG9</srai>,asistente.aiml
+0,PREG9,*,*,Con la finalidad de integrar totalmente a las personas con discapacidad#Comma tanto en el ámbito académico como en el laboral#Comma la Universidade de Vigo dispone de varios programas. El Programa de inserción de discapacitados#Comma promovido por la Vicerreitoría de Extensión Universitaria y Relaciones Internacionales#Comma favorece la integración plena del estudiantado de la vida universitaria.,asistente.aiml
+0,^ ESEIDA ^,*,*,<srai>PREG10</srai>,asistente.aiml
+0,^ DELEGACION DE ALUMNOS ^,*,*,<srai>PREG10</srai>,asistente.aiml
+0,$CUENTA LA <SET>ESEI</SET> CON DELEGACIONES DE ALUMNOS,*,*,<srai>PREG10</srai>,asistente.aiml
+0,$TIENE DELEGACIONES DE ALUMNOS LA <SET>ESEI</SET>,*,*,<srai>PREG10</srai>,asistente.aiml
+0,$HAY ALGUNA DELEGACION DE ALUMNOS EN LA <SET>ESEI</SET>,*,*,<srai>PREG10</srai>,asistente.aiml
+0,PREG10,*,*,Hay delegación de alumnos es conocida como ESEIDA#Comma está a vuestra disposición en su local de la primera planta#Comma así como en el teléfono 988 387 000.,asistente.aiml
+0,QUE ES EL SUPLEMENTO EUROPEO AL TITULO,*,*,<srai>PREG11</srai>,asistente.aiml
+0,^ SUPLEMENTO EUROPEO * TITULO *,*,*,<srai>PREG11</srai>,asistente.aiml
+0,^ SUPLEMENTO EUROPEO ^ TITULO,*,*,<srai>PREG11</srai>,asistente.aiml
+0,SET,*,*,<srai>PREG11</srai>,asistente.aiml
+0,PREG11,*,*,El Suplemento Europeo al Título (SET) es el documento que acompanha al título universitario de carácter oficial #Newliney validez en todo el territorio nacional con la información unificada#Comma personalizada para cada titulado universitario#Comma #Newlinesobre los estudios cursados#Comma los resultados obtenidos#Comma las capacidades profesionales adquiridas y el nivel de su titulación #Newlineen el sistema nacional de educación superior. Este documento lo expiden las universidades según la normativa vigente.,asistente.aiml
+0,QUE ^ PRACTICAS ^ ALUMNO ^ LA ESEI,*,*,<srai>PREG12</srai>,asistente.aiml
+0,PUEDO ^ PRACTICAS ^ LA ESEI,*,*,<srai>PREG12</srai>,asistente.aiml
+0,^  REALIZAR PRACTICAS ^ LA ESEI,*,*,<srai>PREG12</srai>,asistente.aiml
+0,INDICAME LAS PRACTICAS QUE PUEDO REALIZAR EN LA ESEI,*,*,<srai>PREG12</srai>,asistente.aiml
+0,QUE PRACTICAS SE PUEDEN LLEVAR A CABO COMO ALUMNO DE LA ESEI,*,*,<srai>PREG12</srai>,asistente.aiml
+0,PREG12,*,*,Como estudiante de la ESEI#Comma puede realizar prácticas en empresas como complemento de sus estudios. #NewlineDependiendo del grado que esté buscando#Comma la realizaciónde prácticas tendrá diferentes características y consecuencias:#Newline#Newline-Grado en ingeniería informática: se pueden realizar prácticas de 6 ETCS (150 horas) o 12 ETCS (300 horas) que se contabilizan como #Newlinecréditos optativos.#Newline#Newline-Máster en ingeniería informática: la realización de las prácticas será obligatoria y se llevan a cabo en el tercer semestre del máster.#Newline#NewlineIndependentemente del tipo de prácticas que se oferten#Comma es necesario disponer de un #Newlineconvenio de colaboración en vigor#Comma de cuya tramitación se encarga la Fundación Universidad de Vigo (FUVI).,asistente.aiml
+0,^ OFERTAS DE TRABAJOS EN EMPRESAS ^,*,*,<srai>PREG13</srai>,asistente.aiml
+0,^ OFERTA DE PRACTICAS ^,*,*,<srai>PREG13</srai>,asistente.aiml
+0,EXISTE UN LISTADO DE EMPRESAS DONDE REALIZAR PRACTICAS,*,*,<srai>PREG13</srai>,asistente.aiml
+0,COMO SE EN QUE EMPRESAS PUEDO REALIZAR MIS PRACTICAS,*,*,<srai>PREG13</srai>,asistente.aiml
+0,PREG13,*,*,En la página de la uvigo puedes consultar la ofertas de practicas ( esei.uvigo.es/docencia/ofertas-de-practicas/ ),asistente.aiml
+0,^ QUE RECURSOS * <SET>ESEI</SET> ^,*,*,<srai>PREG14</srai>,asistente.aiml
+0,^ QUE SERVICIOS * <SET>ESEI</SET> ^,*,*,<srai>PREG14</srai>,asistente.aiml
+0,QUE ME PUEDES DECIR DE LAS INSTALACIONES DE LA <SET>ESEI</SET>,*,*,<srai>PREG14</srai>,asistente.aiml
+0,TIENE SALON DE ACTOS LA <SET>ESEI</SET>,*,*,<srai>PREG14</srai>,asistente.aiml
+0,CUANTOS SEMINARIOS TIENE LA <SET>ESEI</SET>,*,*,<srai>PREG14</srai>,asistente.aiml
+0,PREG14,*,*,La ESEI cuenta con aulas#Comma laboratorios#Comma despachos#Comma seminarios#Comma cuentas de correo electrónico para cada estudiante#Comma licencia de#NewlineVisual Paradigm#Comma peticiones de tóner#Comma y red wireless.,asistente.aiml
+0,^ LOS TRABAJOS FIN DE GRADO ^,*,*,<srai>PREG15</srai>,asistente.aiml
+0,^ LOS TFG ^,*,*,<srai>PREG15</srai>,asistente.aiml
+0,^ UN TRABAJO DE FIN DE GRADO ^,*,*,<srai>PREG15</srai>,asistente.aiml
+0,^ UN TFG ^,*,*,<srai>PREG15</srai>,asistente.aiml
+0,PREG15,*,*,Un trabajo de fin de grado es un trabajo personal que cada estudiante realiza de manera autónoma #Newlinebajo tutorización docente#Comma y debe permitirle mostrar de forma integrada la adquisición de contenidos#Newlineformativos y las competencias afirmativas al título.,asistente.aiml
+0,^ ACCEDER A LA BIBLIOTECA ^,*,*,<srai>PREG16</srai>,asistente.aiml
+0,DONDE ESTA LA BIBLIOTECA ^,*,*,<srai>PREG16</srai>,asistente.aiml
+0,$COMO HAGO PARA ACCEDER A LA BIBLIOTECA,*,*,<srai>PREG16</srai>,asistente.aiml
+0,$QUE PRECISO PARA ENTRAR A LA BIBLIOTECA,*,*,<srai>PREG16</srai>,asistente.aiml
+0,$NECESITO ALGUN CARNET PARA ENTRAR A LA BIBLIOTECA,*,*,<srai>PREG16</srai>,asistente.aiml
+0,$COMO ENTRO A LA BIBLIOTECA,*,*,<srai>PREG16</srai>,asistente.aiml
+0,PREG16,*,*,La Biblioteca del Campus de Ourense se encuentra en el campus sur#Comma junto a la piscina universitaria.,asistente.aiml
+0,^ ASISTENCIA ^ ACTIVIDADES DE EVALUACION ^,*,*,<srai>PREG17</srai>,asistente.aiml
+0,QUE HAGO PARA JUSTIFICAR MI ASISTENCIA A UNA EVALUACION,*,*,<srai>PREG17</srai>,asistente.aiml
+0,SE PUEDE JUSTIFICAR LA ASISTENCIA A UNA REVISION,*,*,<srai>PREG17</srai>,asistente.aiml
+0,^ ASISTENCIA ^ REVISIONES ^,*,*,<srai>PREG17</srai>,asistente.aiml
+0,PREG17,*,*,Para justificar la asistencia a actividades de evaluación o revisiones debes rellenar y presentar este documento:#Newlinehttps://esei.uvigo.es/wp-content/uploads/formularios/xerais/xustificacion-de-asistencia-a-actividades-de-avaliacion-da-esei/ESEI-017.pdf,asistente.aiml
+0,^ ACTIVIDADES DEPORTIVAS OFRECE LA <SET>ESEI</SET> ^,*,*,<srai>PREG18</srai>,asistente.aiml
+0,^ DEPORTES PUEDO PRACTICAR EN LA <SET>ESEI</SET> ^,*,*,<srai>PREG18</srai>,asistente.aiml
+0,TIENE ALGUN EQUIPO DEPORTIVO LA <SET>ESEI</SET>,*,*,<srai>PREG18</srai>,asistente.aiml
+0,QUE DEPORTES PUEDO HACER DENTRO DE LA <SET>ESEI</SET>,*,*,<srai>PREG18</srai>,asistente.aiml
+0,TIENE ACTIVIDADES DEPORTIVAS PROPIAS LA <SET>ESEI</SET>,*,*,<srai>PREG18</srai>,asistente.aiml
+0,PREG18,*,*,La esei no ofrece actividades deportivas#Comma sin embargo#Comma la Universidad de Vigo dispone de una amplia#Newlineoferta deportiva en el Campus de Ourense. Puedes obtener más información en el siguiente enlace:#Newlinehttps://www.uvigo.gal/es/campus/ourense-campus-auga/deporte-ourense,asistente.aiml
+0,DONDE ESTA *,*,*,No se,asistente.aiml
+0,COMO ESTA *,*,*,No se,asistente.aiml
+0,* ESTA ^,NO SE,*,<think>#Newline		<set var="estado"><srai>Como esta <star/></srai></set>#Newline		</think>#Newline		<condition var="estado">#Newline		<li value="No se">#Newline			<learn>#Newline				<category>#Newline				<pattern>#Newline					Como esta <eval><star/></eval>#Newline				</pattern>#Newline				<template>#Newline					<eval><star/></eval> esta <eval><star index="2"/></eval>#Newline				</template>#Newline				</category>#Newline			</learn>#Newline			Recordare que <star/> esta <star index="2"/>.#Newline		</li>#Newline		</condition>,asistente.aiml
+0,NO,*,*,Vaya.,asistente.aiml
+0,ENVIA A * CON EL TEMA * EL MENSAJE *,*,*,<mail>#Newline		<subject><star index="2"/></subject>#Newline		<to><star/>@mail.gal</to>#Newline		<msg><star index="3"/></msg>#Newline	</mail>,asistente.aiml
+0,ENVIA EL SIGUIENTE MENSAJE SOBRE EL TEMA * A * QUE DIGA *,*,*,<mail>#Newline		<subject><star/></subject>#Newline		<to><star index="2"/>@mail.gal</to>#Newline		<msg><star index="3"/></msg>#Newline	</mail>,asistente.aiml
+0,*,*,*,Puedes repetir porfavor#Comma no te entiendo.,asistente.aiml

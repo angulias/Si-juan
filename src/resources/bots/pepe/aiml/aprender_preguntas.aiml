@@ -1,0 +1,1146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+
+
+
+<!--aprender nuevas formulaciones de pregunta 1-->
+<category> 
+	<pattern>^ Universidad de Vigo ^</pattern> 
+	<template>
+		<think>
+			<set name="aux1"><star/></set>
+			<set name="aux2"><star index="2"/></set>
+		</think>
+		No entendí bien tu pregunta, quieres saber que es la Universidad de vigo?
+	</template> 
+</category>
+
+<category> 
+	<pattern>Si</pattern> 
+	<that>No entendí bien tu pregunta quieres saber que es la Universidad de vigo</that>
+	<template>
+		<!--Evitar valores unknown-->
+		<condition name="aux1">
+			<li value="unknown"><set name="aux1"></set></li>
+		</condition>
+		<condition name="aux2">
+			<li value="unknown"><set name="aux2"></set></li>
+		</condition>
+		<learn>
+			<category>
+				<pattern><eval><get name="aux1"/></eval> Universidad de Vigo <eval><get name="aux2"/></eval></pattern>
+				<template><srai>PREG1</srai></template>
+			</category>
+		</learn>
+		<srai>PREG1</srai>
+	</template>
+</category>
+
+<category> 
+	<pattern>No</pattern>
+	<that>No entendí bien tu pregunta quieres saber que es la Universidad de vigo</that>
+	<template>Entendido.</template> 
+</category>
+
+
+<!--aprender nuevas formulaciones de pregunta 2-->
+<category> 
+	<pattern>^ donde ^ esei ^</pattern> 
+	<template>
+		<think>
+			<set name="aux1"><star/></set>
+			<set name="aux2"><star index="2"/></set>
+			<set name="aux3"><star index="3"/></set>
+		</think>
+		No entendí bien tu pregunta, quieres saber donde esta la ESEI?
+	</template> 
+</category>
+
+<category> 
+	<pattern>^ donde ^ esei ^</pattern> 
+	<template>
+		<think>
+			<set name="aux1"><star/></set>
+			<set name="aux2"><star index="2"/></set>
+			<set name="aux3"><star index="3"/></set>
+		</think>
+		No entendí bien tu pregunta, quieres saber donde esta la ESEI?
+	</template> 
+</category>
+
+<category> 
+	<pattern>Si</pattern> 
+	<that>No entendí bien tu pregunta quieres saber donde esta la esei</that>
+	<template>
+		<!--Evitar valores unknown-->
+		<condition name="aux1">
+			<li value="unknown"><set name="aux1"></set></li>
+		</condition>
+		<condition name="aux2">
+			<li value="unknown"><set name="aux2"></set></li>
+		</condition>
+		<condition name="aux3">
+			<li value="unknown"><set name="aux3"></set></li>
+		</condition>
+		<learn>
+			<category>
+				<pattern><eval><get name="aux1"/></eval> donde <eval><get name="aux2"/></eval> esei <eval><get name="aux3"/></eval></pattern>
+				<template><srai>PREG2</srai></template>
+			</category>
+		</learn>
+		<srai>PREG2</srai>
+	</template>
+</category>
+
+<category> 
+	<pattern>No</pattern>
+	<that>No entendí bien tu pregunta quieres saber donde esta la esei</that>
+	<template>Entendido.</template> 
+</category>
+
+
+<!--aprender nuevas formulaciones de pregunta 3-->
+<category> 
+	<pattern>^ estudiar ^ esei ^</pattern> 
+	<template>
+		<think>
+			<set name="aux1"><star/></set>
+			<set name="aux2"><star index="2"/></set>
+			<set name="aux3"><star index="3"/></set>
+		</think>
+		No entendí bien tu pregunta, quieres saber que asignaturas puedes estudiar en la ESEI?
+	</template> 
+</category>
+
+<category> 
+	<pattern>Si</pattern> 
+	<that>No entendí bien tu pregunta quieres saber que asignaturas puedes estudiar en la esei</that>
+	<template>
+		<!--Evitar valores unknown-->
+		<condition name="aux1">
+			<li value="unknown"><set name="aux1"></set></li>
+		</condition>
+		<condition name="aux2">
+			<li value="unknown"><set name="aux2"></set></li>
+		</condition>
+		<condition name="aux3">
+			<li value="unknown"><set name="aux3"></set></li>
+		</condition>
+		<learn>
+			<category>
+				<pattern><eval><get name="aux1"/></eval> estudiar <eval><get name="aux2"/></eval> esei <eval><get name="aux3"/></eval></pattern>
+				<template><srai>PREG3</srai></template>
+			</category>
+		</learn>
+		<srai>PREG3</srai>
+	</template>
+</category>
+
+<category> 
+	<pattern>No</pattern>
+	<that>No entendí bien tu pregunta quieres saber que asignaturas puedes estudiar en la esei</that>
+	<template>Entendido.</template> 
+</category>
+
+<category> 
+	<pattern>^ carreras ^ esei ^</pattern> 
+	<template>
+		<think>
+			<set name="aux1"><star/></set>
+			<set name="aux2"><star index="2"/></set>
+			<set name="aux3"><star index="3"/></set>
+		</think>
+		No entendí bien tu pregunta, quieres saber que carreras puedes estudiar en la ESEI?
+	</template> 
+</category>
+
+<category> 
+	<pattern>Si</pattern> 
+	<that>No entendí bien tu pregunta quieres saber que carreras puedes estudiar en la esei</that>
+	<template>
+		<!--Evitar valores unknown-->
+		<condition name="aux1">
+			<li value="unknown"><set name="aux1"></set></li>
+		</condition>
+		<condition name="aux2">
+			<li value="unknown"><set name="aux2"></set></li>
+		</condition>
+		<condition name="aux3">
+			<li value="unknown"><set name="aux3"></set></li>
+		</condition>
+		<learn>
+			<category>
+				<pattern><eval><get name="aux1"/></eval> carreras <eval><get name="aux2"/></eval> esei <eval><get name="aux3"/></eval></pattern>
+				<template><srai>PREG3</srai></template>
+			</category>
+		</learn>
+		<srai>PREG3</srai>
+	</template>
+</category>
+
+<category> 
+	<pattern>No</pattern>
+	<that>No entendí bien tu pregunta quieres saber que carreras puedes estudiar en la esei</that>
+	<template>Entendido.</template> 
+</category>
+
+
+<!--aprender nuevas formulaciones de pregunta 4-->
+<category> 
+	<pattern>^ estudiar ^ esei ^</pattern> 
+	<template>
+		<think>
+			<set name="aux1"><star/></set>
+			<set name="aux2"><star index="2"/></set>
+			<set name="aux3"><star index="3"/></set>
+		</think>
+		No entendí bien tu pregunta, quieres saber si vale la pena estudiar en la ESEI?
+	</template> 
+</category>
+
+<category> 
+	<pattern>Si</pattern> 
+	<that>No entendí bien tu pregunta quieres saber si vale la pena estudiar en la esei</that>
+	<template>
+		<!--Evitar valores unknown-->
+		<condition name="aux1">
+			<li value="unknown"><set name="aux1"></set></li>
+		</condition>
+		<condition name="aux2">
+			<li value="unknown"><set name="aux2"></set></li>
+		</condition>
+		<condition name="aux3">
+			<li value="unknown"><set name="aux3"></set></li>
+		</condition>
+		<learn>
+			<category>
+				<pattern><eval><get name="aux1"/></eval> estudiar <eval><get name="aux2"/></eval> esei <eval><get name="aux3"/></eval></pattern>
+				<template><srai>PREG4</srai></template>
+			</category>
+		</learn>
+		<srai>PREG4</srai>
+	</template>
+</category>
+
+<category> 
+	<pattern>No</pattern>
+	<that>No entendí bien tu pregunta quieres saber si vale la pena estudiar en la esei</that>
+	<template>Entendido.</template> 
+</category>
+
+
+<!--aprender nuevas formulaciones de pregunta 5-->
+<category> 
+	<pattern>^ cafeteria ^ esei ^</pattern> 
+	<template>
+		<think>
+			<set name="aux1"><star/></set>
+			<set name="aux2"><star index="2"/></set>
+			<set name="aux3"><star index="3"/></set>
+		</think>
+		No entendí bien tu pregunta, quieres saber si hay una cafeteria en la ESEI?
+	</template> 
+</category>
+
+<category> 
+	<pattern>Si</pattern> 
+	<that>No entendí bien tu pregunta quieres saber si hay una cafeteria en la esei</that>
+	<template>
+		<!--Evitar valores unknown-->
+		<condition name="aux1">
+			<li value="unknown"><set name="aux1"></set></li>
+		</condition>
+		<condition name="aux2">
+			<li value="unknown"><set name="aux2"></set></li>
+		</condition>
+		<condition name="aux3">
+			<li value="unknown"><set name="aux3"></set></li>
+		</condition>
+		<learn>
+			<category>
+				<pattern><eval><get name="aux1"/></eval> cafeteria <eval><get name="aux2"/></eval> esei <eval><get name="aux3"/></eval></pattern>
+				<template><srai>PREG5</srai></template>
+			</category>
+		</learn>
+		<srai>PREG5</srai>
+	</template>
+</category>
+
+<category> 
+	<pattern>No</pattern>
+	<that>No entendí bien tu pregunta quieres saber si hay una cafeteria en la esei</that>
+	<template>Entendido.</template> 
+</category>
+
+<category> 
+	<pattern>^ comer ^ esei ^</pattern> 
+	<template>
+		<think>
+			<set name="aux1"><star/></set>
+			<set name="aux2"><star index="2"/></set>
+			<set name="aux3"><star index="3"/></set>
+		</think>
+		No entendí bien tu pregunta, quieres saber donde comer en la ESEI?
+	</template> 
+</category>
+
+<category> 
+	<pattern>Si</pattern> 
+	<that>No entendí bien tu pregunta quieres saber donde comer en la esei</that>
+	<template>
+		<!--Evitar valores unknown-->
+		<condition name="aux1">
+			<li value="unknown"><set name="aux1"></set></li>
+		</condition>
+		<condition name="aux2">
+			<li value="unknown"><set name="aux2"></set></li>
+		</condition>
+		<condition name="aux3">
+			<li value="unknown"><set name="aux3"></set></li>
+		</condition>
+		<learn>
+			<category>
+				<pattern><eval><get name="aux1"/></eval> comer <eval><get name="aux2"/></eval> esei <eval><get name="aux3"/></eval></pattern>
+				<template><srai>PREG5</srai></template>
+			</category>
+		</learn>
+		<srai>PREG5</srai>
+	</template>
+</category>
+
+<category> 
+	<pattern>No</pattern>
+	<that>No entendí bien tu pregunta quieres saber donde comer en la esei</that>
+	<template>Entendido.</template> 
+</category>
+
+
+<!--aprender nuevas formulaciones de pregunta 6-->
+<category> 
+	<pattern>^ secretaria ^ esei ^</pattern> 
+	<template>
+		<think>
+			<set name="aux1"><star/></set>
+			<set name="aux2"><star index="2"/></set>
+			<set name="aux3"><star index="3"/></set>
+		</think>
+		No entendí bien tu pregunta, quieres saber donde esta la secretaria de la ESEI?
+	</template> 
+</category>
+
+<category> 
+	<pattern>Si</pattern> 
+	<that>No entendí bien tu pregunta quieres saber donde esta la secretaria de la esei</that>
+	<template>
+		<!--Evitar valores unknown-->
+		<condition name="aux1">
+			<li value="unknown"><set name="aux1"></set></li>
+		</condition>
+		<condition name="aux2">
+			<li value="unknown"><set name="aux2"></set></li>
+		</condition>
+		<condition name="aux3">
+			<li value="unknown"><set name="aux3"></set></li>
+		</condition>
+		<learn>
+			<category>
+				<pattern><eval><get name="aux1"/></eval> secretaria <eval><get name="aux2"/></eval> esei <eval><get name="aux3"/></eval></pattern>
+				<template><srai>PREG6</srai></template>
+			</category>
+		</learn>
+		<srai>PREG6</srai>
+	</template>
+</category>
+
+<category> 
+	<pattern>No</pattern>
+	<that>No entendí bien tu pregunta quieres saber donde esta la secretaria de la esei</that>
+	<template>Entendido.</template> 
+</category>
+
+
+<!--aprender nuevas formulaciones de pregunta 7-->
+<category> 
+	<pattern>^ horario ^ secretaria ^</pattern> 
+	<template>
+		<think>
+			<set name="aux1"><star/></set>
+			<set name="aux2"><star index="2"/></set>
+			<set name="aux3"><star index="3"/></set>
+		</think>
+		No entendí bien tu pregunta, quieres saber el horario de la secretaria?
+	</template> 
+</category>
+
+<category> 
+	<pattern>Si</pattern> 
+	<that>No entendí bien tu pregunta quieres saber el horario de la secretaria</that>
+	<template>
+		<!--Evitar valores unknown-->
+		<condition name="aux1">
+			<li value="unknown"><set name="aux1"></set></li>
+		</condition>
+		<condition name="aux2">
+			<li value="unknown"><set name="aux2"></set></li>
+		</condition>
+		<condition name="aux3">
+			<li value="unknown"><set name="aux3"></set></li>
+		</condition>
+		<learn>
+			<category>
+				<pattern><eval><get name="aux1"/></eval> secretaria <eval><get name="aux2"/></eval> esei <eval><get name="aux3"/></eval></pattern>
+				<template><srai>PREG7</srai></template>
+			</category>
+		</learn>
+		<srai>PREG7</srai>
+	</template>
+</category>
+
+<category> 
+	<pattern>No</pattern>
+	<that>No entendí bien tu pregunta quieres saber el horario de la secretaria</that>
+	<template>Entendido.</template> 
+</category>
+
+<category> 
+	<pattern>^ matricula ^</pattern> 
+	<template>
+		<think>
+			<set name="aux1"><star/></set>
+			<set name="aux2"><star index="2"/></set>
+			<set name="aux3"><star index="3"/></set>
+		</think>
+		No entendí bien tu pregunta, quieres saber cuando puedes ir a secretaria para modificar tu matricula?
+	</template> 
+</category>
+
+<category> 
+	<pattern>Si</pattern> 
+	<that>No entendí bien tu pregunta quieres saber cuando puedes ir a secretaria para modificar tu matricula</that>
+	<template>
+		<!--Evitar valores unknown-->
+		<condition name="aux1">
+			<li value="unknown"><set name="aux1"></set></li>
+		</condition>
+		<condition name="aux2">
+			<li value="unknown"><set name="aux2"></set></li>
+		</condition>
+		<learn>
+			<category>
+				<pattern><eval><get name="aux1"/></eval> matricula <eval><get name="aux2"/></eval></pattern>
+				<template><srai>PREG7</srai></template>
+			</category>
+		</learn>
+		<srai>PREG7</srai>
+	</template>
+</category>
+
+<category> 
+	<pattern>No</pattern>
+	<that>No entendí bien tu pregunta quieres saber cuando puedes ir a secretaria para modificar tu matricula</that>
+	<template>Entendido.</template> 
+</category>
+
+
+<!--aprender nuevas formulaciones de pregunta 8-->
+<category> 
+	<pattern>^ PAT ^</pattern> 
+	<template>
+		<think>
+			<set name="aux1"><star/></set>
+			<set name="aux2"><star index="2"/></set>
+			<set name="aux3"><star index="3"/></set>
+		</think>
+		No entendí bien tu pregunta, quieres saber que es un PAT?
+	</template> 
+</category>
+
+<category> 
+	<pattern>Si</pattern> 
+	<that>No entendí bien tu pregunta quieres saber que es un PAT</that>
+	<template>
+		<!--Evitar valores unknown-->
+		<condition name="aux1">
+			<li value="unknown"><set name="aux1"></set></li>
+		</condition>
+		<condition name="aux2">
+			<li value="unknown"><set name="aux2"></set></li>
+		</condition>
+		<learn>
+			<category>
+				<pattern><eval><get name="aux1"/></eval> PAT <eval><get name="aux2"/></eval></pattern>
+				<template><srai>PREG8</srai></template>
+			</category>
+		</learn>
+		<srai>PREG8</srai>
+	</template>
+</category>
+
+<category> 
+	<pattern>No</pattern>
+	<that>No entendí bien tu pregunta quieres saber que es un PAT</that>
+	<template>Entendido.</template> 
+</category>
+
+
+<!--aprender nuevas formulaciones de pregunta 9-->
+<category> 
+	<pattern>^ necesidades educativas especiales ^</pattern> 
+	<template>
+		<think>
+			<set name="aux1"><star/></set>
+			<set name="aux2"><star index="2"/></set>
+		</think>
+		No entendí bien tu pregunta, quieres saber cual es el protocolo de acogida de alumnos con necesidades educativas especiales?
+	</template> 
+</category>
+
+<category> 
+	<pattern>Si</pattern> 
+	<that>No entendí bien tu pregunta quieres saber cual es el protocolo de acogida de alumnos con necesidades educativas especiales</that>
+	<template>
+		<!--Evitar valores unknown-->
+		<condition name="aux1">
+			<li value="unknown"><set name="aux1"></set></li>
+		</condition>
+		<condition name="aux2">
+			<li value="unknown"><set name="aux2"></set></li>
+		</condition>
+		<learn>
+			<category>
+				<pattern><eval><get name="aux1"/></eval> necesidades educativas especiales <eval><get name="aux2"/></eval></pattern>
+				<template><srai>PREG9</srai></template>
+			</category>
+		</learn>
+		<srai>PREG9</srai>
+	</template>
+</category>
+
+<category> 
+	<pattern>No</pattern>
+	<that>No entendí bien tu pregunta quieres saber cual es el protocolo de acogida de alumnos con necesidades educativas especiales</that>
+	<template>Entendido.</template> 
+</category>
+
+
+<!--aprender nuevas formulaciones de pregunta 10-->
+<category> 
+	<pattern>^ delegacion ^</pattern> 
+	<template>
+		<think>
+			<set name="aux1"><star/></set>
+			<set name="aux2"><star index="2"/></set>
+			<set name="aux3"><star index="3"/></set>
+		</think>
+		No entendí bien tu pregunta, quieres saber si la ESEI tiene una delegación de alumnos?
+	</template> 
+</category>
+
+<category> 
+	<pattern>Si</pattern> 
+	<that>No entendí bien tu pregunta quieres saber si la ESEI tiene una delegación de alumnos</that>
+	<template>
+		<!--Evitar valores unknown-->
+		<condition name="aux1">
+			<li value="unknown"><set name="aux1"></set></li>
+		</condition>
+		<condition name="aux2">
+			<li value="unknown"><set name="aux2"></set></li>
+		</condition>
+		<learn>
+			<category>
+				<pattern><eval><get name="aux1"/></eval> delegacion <eval><get name="aux2"/></eval></pattern>
+				<template><srai>PREG10</srai></template>
+			</category>
+		</learn>
+		<srai>PREG10</srai>
+	</template>
+</category>
+
+<category> 
+	<pattern>No</pattern>
+	<that>No entendí bien tu pregunta quieres saber si la ESEI tiene una delegación de alumnos</that>
+	<template>Entendido.</template> 
+</category>
+
+<!--aprender nuevas formulaciones de pregunta 11-->
+<category> 
+	<pattern>^ suplemento europeo al titulo ^</pattern> 
+	<template>
+		<think>
+			<set name="aux1"><star/></set>
+			<set name="aux2"><star index="2"/></set>
+			<set name="aux3"><star index="3"/></set>
+		</think>
+		No entendí bien tu pregunta, quieres saber que es el suplemento europeo al titulo?
+	</template> 
+</category>
+
+<category> 
+	<pattern>Si</pattern> 
+	<that>No entendí bien tu pregunta quieres saber que es el suplemento europeo al titulo</that>
+	<template>
+		<!--Evitar valores unknown-->
+		<condition name="aux1">
+			<li value="unknown"><set name="aux1"></set></li>
+		</condition>
+		<condition name="aux2">
+			<li value="unknown"><set name="aux2"></set></li>
+		</condition>
+		<learn>
+			<category>
+				<pattern><eval><get name="aux1"/></eval> suplemento europeo al titulo <eval><get name="aux2"/></eval></pattern>
+				<template><srai>PREG11</srai></template>
+			</category>
+		</learn>
+		<srai>PREG11</srai>
+	</template>
+</category>
+
+<category> 
+	<pattern>No</pattern>
+	<that>No entendí bien tu pregunta quieres saber que es el suplemento europeo al titulo</that>
+	<template>Entendido.</template> 
+</category>
+
+
+<!--aprender nuevas formulaciones de pregunta 12-->
+<category> 
+	<pattern>^ practicas ^ ESEI ^</pattern> 
+	<template>
+		<think>
+			<set name="aux1"><star/></set>
+			<set name="aux2"><star index="2"/></set>
+			<set name="aux3"><star index="3"/></set>
+		</think>
+		No entendí bien tu pregunta, quieres saber que tipo de practicas puedes realizar en la ESEI?
+	</template> 
+</category>
+
+<category> 
+	<pattern>Si</pattern> 
+	<that>No entendí bien tu pregunta quieres saber que tipo de practicas puedes realizar en la ESEI</that>
+	<template>
+		<!--Evitar valores unknown-->
+		<condition name="aux1">
+			<li value="unknown"><set name="aux1"></set></li>
+		</condition>
+		<condition name="aux2">
+			<li value="unknown"><set name="aux2"></set></li>
+		</condition>
+		<condition name="aux3">
+			<li value="unknown"><set name="aux3"></set></li>
+		</condition>
+		<learn>
+			<category>
+				<pattern><eval><get name="aux1"/></eval> practicas <eval><get name="aux2"/></eval> ESEI <eval><get name="aux3"/></eval></pattern>
+				<template><srai>PREG12</srai></template>
+			</category>
+		</learn>
+		<srai>PREG12</srai>
+	</template>
+</category>
+
+<category> 
+	<pattern>No</pattern>
+	<that>No entendí bien tu pregunta quieres saber que tipo de practicas puedes realizar en la ESEI</that>
+	<template>Entendido.</template> 
+</category>
+
+
+<!--aprender nuevas formulaciones de pregunta 13-->
+<category> 
+	<pattern>^ practicas ^ empresas ^</pattern> 
+	<template>
+		<think>
+			<set name="aux1"><star/></set>
+			<set name="aux2"><star index="2"/></set>
+			<set name="aux3"><star index="3"/></set>
+		</think>
+		No entendí bien tu pregunta, quieres saber como consultar la oferta de practicas en empresas?
+	</template> 
+</category>
+
+<category> 
+	<pattern>Si</pattern> 
+	<that>No entendí bien tu pregunta quieres saber como consultar la oferta de practicas en empresas</that>
+	<template>
+		<!--Evitar valores unknown-->
+		<condition name="aux1">
+			<li value="unknown"><set name="aux1"></set></li>
+		</condition>
+		<condition name="aux2">
+			<li value="unknown"><set name="aux2"></set></li>
+		</condition>
+		<condition name="aux3">
+			<li value="unknown"><set name="aux3"></set></li>
+		</condition>
+		<learn>
+			<category>
+				<pattern><eval><get name="aux1"/></eval> practicas <eval><get name="aux2"/></eval> empresas <eval><get name="aux3"/></eval></pattern>
+				<template><srai>PREG13</srai></template>
+			</category>
+		</learn>
+		<srai>PREG13</srai>
+	</template>
+</category>
+
+<category> 
+	<pattern>No</pattern>
+	<that>No entendí bien tu pregunta quieres saber como consultar la oferta de practicas en empresas</that>
+	<template>Entendido.</template> 
+</category>
+
+<category> 
+	<pattern>^ empresas ^ practicas ^</pattern> 
+	<template>
+		<think>
+			<set name="aux1"><star/></set>
+			<set name="aux2"><star index="2"/></set>
+			<set name="aux3"><star index="3"/></set>
+		</think>
+		No entendí bien tu pregunta, quieres saber en que empresas puedes realizar practicas?
+	</template> 
+</category>
+
+<category> 
+	<pattern>Si</pattern> 
+	<that>No entendí bien tu pregunta quieres saber en que empresas puedes realizar practicas</that>
+	<template>
+		<!--Evitar valores unknown-->
+		<condition name="aux1">
+			<li value="unknown"><set name="aux1"></set></li>
+		</condition>
+		<condition name="aux2">
+			<li value="unknown"><set name="aux2"></set></li>
+		</condition>
+		<condition name="aux3">
+			<li value="unknown"><set name="aux3"></set></li>
+		</condition>
+		<learn>
+			<category>
+				<pattern><eval><get name="aux1"/></eval> empresas <eval><get name="aux2"/></eval> practicas <eval><get name="aux3"/></eval></pattern>
+				<template><srai>PREG13</srai></template>
+			</category>
+		</learn>
+		<srai>PREG13</srai>
+	</template>
+</category>
+
+<category> 
+	<pattern>No</pattern>
+	<that>No entendí bien tu pregunta quieres saber en que empresas puedes realizar practicas</that>
+	<template>Entendido.</template> 
+</category>
+
+
+<!--aprender nuevas formulaciones de pregunta 14-->
+<category> 
+	<pattern>^ recursos ^ esei ^</pattern> 
+	<template>
+		<think>
+			<set name="aux1"><star/></set>
+			<set name="aux2"><star index="2"/></set>
+			<set name="aux3"><star index="3"/></set>
+		</think>
+		No entendí bien tu pregunta, quieres saber con que recursos materiales y servicios cuenta la ESEI?
+	</template> 
+</category>
+
+<category> 
+	<pattern>Si</pattern> 
+	<that>No entendí bien tu pregunta quieres saber con que recursos materiales y servicios cuenta la ESEI</that>
+	<template>
+		<!--Evitar valores unknown-->
+		<condition name="aux1">
+			<li value="unknown"><set name="aux1"></set></li>
+		</condition>
+		<condition name="aux2">
+			<li value="unknown"><set name="aux2"></set></li>
+		</condition>
+		<condition name="aux3">
+			<li value="unknown"><set name="aux3"></set></li>
+		</condition>
+		<learn>
+			<category>
+				<pattern><eval><get name="aux1"/></eval> recursos <eval><get name="aux2"/></eval> esei <eval><get name="aux3"/></eval></pattern>
+				<template><srai>PREG14</srai></template>
+			</category>
+		</learn>
+		<srai>PREG14</srai>
+	</template>
+</category>
+
+<category> 
+	<pattern>No</pattern>
+	<that>No entendí bien tu pregunta quieres saber con que recursos materiales y servicios cuenta la ESEI</that>
+	<template>Entendido.</template> 
+</category>
+
+<category> 
+	<pattern>^ instalaciones ^ esei ^</pattern> 
+	<template>
+		<think>
+			<set name="aux1"><star/></set>
+			<set name="aux2"><star index="2"/></set>
+			<set name="aux3"><star index="3"/></set>
+		</think>
+		No entendí bien tu pregunta, quieres saber con que instalaciones cuenta la ESEI?
+	</template> 
+</category>
+
+<category> 
+	<pattern>Si</pattern> 
+	<that>No entendí bien tu pregunta quieres saber con que instalaciones cuenta la ESEI</that>
+	<template>
+		<!--Evitar valores unknown-->
+		<condition name="aux1">
+			<li value="unknown"><set name="aux1"></set></li>
+		</condition>
+		<condition name="aux2">
+			<li value="unknown"><set name="aux2"></set></li>
+		</condition>
+		<condition name="aux3">
+			<li value="unknown"><set name="aux3"></set></li>
+		</condition>
+		<learn>
+			<category>
+				<pattern><eval><get name="aux1"/></eval> instalaciones <eval><get name="aux2"/></eval> esei <eval><get name="aux3"/></eval></pattern>
+				<template><srai>PREG14</srai></template>
+			</category>
+		</learn>
+		<srai>PREG14</srai>
+	</template>
+</category>
+
+<category> 
+	<pattern>No</pattern>
+	<that>No entendí bien tu pregunta quieres saber con que instalaciones cuenta la ESEI</that>
+	<template>Entendido.</template> 
+</category>
+
+
+<!--aprender nuevas formulaciones de pregunta 15-->
+<category> 
+	<pattern>^ Trabajos Fin de Grado ^</pattern> 
+	<template>
+		<think>
+			<set name="aux1"><star/></set>
+			<set name="aux2"><star index="2"/></set>
+		</think>
+		No entendí bien tu pregunta, quieres saber que son los Trabajos de Fin de Grado?
+	</template> 
+</category>
+
+<category> 
+	<pattern>Si</pattern> 
+	<that>No entendí bien tu pregunta quieres saber que son los Trabajos de Fin de Grado</that>
+	<template>
+		<!--Evitar valores unknown-->
+		<condition name="aux1">
+			<li value="unknown"><set name="aux1"></set></li>
+		</condition>
+		<condition name="aux2">
+			<li value="unknown"><set name="aux2"></set></li>
+		</condition>
+		<learn>
+			<category>
+				<pattern><eval><get name="aux1"/></eval> Trabajos Fin de Grado <eval><get name="aux2"/></eval></pattern>
+				<template><srai>PREG15</srai></template>
+			</category>
+		</learn>
+		<srai>PREG15</srai>
+	</template>
+</category>
+
+<category> 
+	<pattern>No</pattern>
+	<that>No entendí bien tu pregunta quieres saber que son los Trabajos de Fin de Grado</that>
+	<template>Entendido.</template> 
+</category>
+
+<category> 
+	<pattern>^ TFG ^</pattern> 
+	<template>
+		<think>
+			<set name="aux1"><star/></set>
+			<set name="aux2"><star index="2"/></set>
+		</think>
+		No entendí bien tu pregunta, quieres saber que son los TFG?
+	</template> 
+</category>
+
+<category> 
+	<pattern>Si</pattern> 
+	<that>No entendí bien tu pregunta quieres saber que son los TFG</that>
+	<template>
+		<!--Evitar valores unknown-->
+		<condition name="aux1">
+			<li value="unknown"><set name="aux1"></set></li>
+		</condition>
+		<condition name="aux2">
+			<li value="unknown"><set name="aux2"></set></li>
+		</condition>
+		<learn>
+			<category>
+				<pattern><eval><get name="aux1"/></eval> TFG <eval><get name="aux2"/></eval></pattern>
+				<template><srai>PREG15</srai></template>
+			</category>
+		</learn>
+		<srai>PREG15</srai>
+	</template>
+</category>
+
+<category> 
+	<pattern>No</pattern>
+	<that>No entendí bien tu pregunta quieres saber que son los TFG</that>
+	<template>Entendido.</template> 
+</category>
+
+
+<!--aprender nuevas formulaciones de pregunta 16-->
+<category> 
+	<pattern>^ Biblioteca ^</pattern> 
+	<template>
+		<think>
+			<set name="aux1"><star/></set>
+			<set name="aux2"><star index="2"/></set>
+		</think>
+		No entendí bien tu pregunta, quieres saber como acceder a la bilbioteca?
+	</template> 
+</category>
+
+<category> 
+	<pattern>Si</pattern> 
+	<that>No entendí bien tu pregunta quieres saber como acceder a la bilbioteca</that>
+	<template>
+		<!--Evitar valores unknown-->
+		<condition name="aux1">
+			<li value="unknown"><set name="aux1"></set></li>
+		</condition>
+		<condition name="aux2">
+			<li value="unknown"><set name="aux2"></set></li>
+		</condition>
+		<learn>
+			<category>
+				<pattern><eval><get name="aux1"/></eval> Biblioteca <eval><get name="aux2"/></eval></pattern>
+				<template><srai>PREG16</srai></template>
+			</category>
+		</learn>
+		<srai>PREG16</srai>
+	</template>
+</category>
+
+<category> 
+	<pattern>No</pattern>
+	<that>No entendí bien tu pregunta quieres saber como acceder a la bilbioteca</that>
+	<template>Entendido.</template> 
+</category>
+
+
+<!--aprender nuevas formulaciones de pregunta 17-->
+<category> 
+	<pattern>^ asistencia ^ evaluaciones ^</pattern> 
+	<template>
+		<think>
+			<set name="aux1"><star/></set>
+			<set name="aux2"><star index="2"/></set>
+			<set name="aux3"><star index="3"/></set>
+		</think>
+		No entendí bien tu pregunta, quieres saber como justificar tu asistencia a evaluaciones?
+	</template> 
+</category>
+
+<category> 
+	<pattern>Si</pattern> 
+	<that>No entendí bien tu pregunta quieres saber como justificar tu asistencia a evaluaciones</that>
+	<template>
+		<!--Evitar valores unknown-->
+		<condition name="aux1">
+			<li value="unknown"><set name="aux1"></set></li>
+		</condition>
+		<condition name="aux2">
+			<li value="unknown"><set name="aux2"></set></li>
+		</condition>
+		<condition name="aux3">
+			<li value="unknown"><set name="aux3"></set></li>
+		</condition>
+		<learn>
+			<category>
+				<pattern><eval><get name="aux1"/></eval> asistencia <eval><get name="aux2"/></eval> evaluaciones <eval><get name="aux3"/></eval></pattern>
+				<template><srai>PREG17</srai></template>
+			</category>
+		</learn>
+		<srai>PREG17</srai>
+	</template>
+</category>
+
+<category> 
+	<pattern>No</pattern>
+	<that>No entendí bien tu pregunta quieres saber como justificar tu asistencia a evaluaciones</that>
+	<template>Entendido.</template> 
+</category>
+
+<category> 
+	<pattern>^ asistencia ^ evaluacion ^</pattern> 
+	<template>
+		<think>
+			<set name="aux1"><star/></set>
+			<set name="aux2"><star index="2"/></set>
+			<set name="aux3"><star index="3"/></set>
+		</think>
+		No entendí bien tu pregunta, quieres saber como justificar tu asistencia a una evaluacion?
+	</template> 
+</category>
+
+<category> 
+	<pattern>Si</pattern> 
+	<that>No entendí bien tu pregunta quieres saber como justificar tu asistencia a una evaluacion</that>
+	<template>
+		<!--Evitar valores unknown-->
+		<condition name="aux1">
+			<li value="unknown"><set name="aux1"></set></li>
+		</condition>
+		<condition name="aux2">
+			<li value="unknown"><set name="aux2"></set></li>
+		</condition>
+		<condition name="aux3">
+			<li value="unknown"><set name="aux3"></set></li>
+		</condition>
+		<learn>
+			<category>
+				<pattern><eval><get name="aux1"/></eval> asistencia <eval><get name="aux2"/></eval> evaluacion <eval><get name="aux3"/></eval></pattern>
+				<template><srai>PREG17</srai></template>
+			</category>
+		</learn>
+		<srai>PREG17</srai>
+	</template>
+</category>
+
+<category> 
+	<pattern>No</pattern>
+	<that>No entendí bien tu pregunta quieres saber como justificar tu asistencia a una evaluacion</that>
+	<template>Entendido.</template> 
+</category>
+
+<category> 
+	<pattern>^ asistencia ^ revision ^</pattern> 
+	<template>
+		<think>
+			<set name="aux1"><star/></set>
+			<set name="aux2"><star index="2"/></set>
+			<set name="aux3"><star index="3"/></set>
+		</think>
+		No entendí bien tu pregunta, quieres saber como justificar tu asistencia a una revision?
+	</template> 
+</category>
+
+<category> 
+	<pattern>Si</pattern> 
+	<that>No entendí bien tu pregunta quieres saber como justificar tu asistencia a una revision</that>
+	<template>
+		<!--Evitar valores unknown-->
+		<condition name="aux1">
+			<li value="unknown"><set name="aux1"></set></li>
+		</condition>
+		<condition name="aux2">
+			<li value="unknown"><set name="aux2"></set></li>
+		</condition>
+		<condition name="aux3">
+			<li value="unknown"><set name="aux3"></set></li>
+		</condition>
+		<learn>
+			<category>
+				<pattern><eval><get name="aux1"/></eval> asistencia <eval><get name="aux2"/></eval> revision <eval><get name="aux3"/></eval></pattern>
+				<template><srai>PREG17</srai></template>
+			</category>
+		</learn>
+		<srai>PREG17</srai>
+	</template>
+</category>
+
+<category> 
+	<pattern>No</pattern>
+	<that>No entendí bien tu pregunta quieres saber como justificar tu asistencia a una revision</that>
+	<template>Entendido.</template> 
+</category>
+
+
+<!--aprender nuevas formulaciones de pregunta 18-->
+<category> 
+	<pattern>^ deportes ^</pattern> 
+	<template>
+		<think>
+			<set name="aux1"><star/></set>
+			<set name="aux2"><star index="2"/></set>
+		</think>
+		No entendí bien tu pregunta, quieres saber que deportes puedes practicar en la ESEI?
+	</template> 
+</category>
+
+<category> 
+	<pattern>Si</pattern> 
+	<that>No entendí bien tu pregunta quieres saber que deportes puedes practicar en la ESEI</that>
+	<template>
+		<!--Evitar valores unknown-->
+		<condition name="aux1">
+			<li value="unknown"><set name="aux1"></set></li>
+		</condition>
+		<condition name="aux2">
+			<li value="unknown"><set name="aux2"></set></li>
+		</condition>
+		<learn>
+			<category>
+				<pattern><eval><get name="aux1"/></eval> deportes <eval><get name="aux2"/></eval></pattern>
+				<template><srai>PREG18</srai></template>
+			</category>
+		</learn>
+		<srai>PREG18</srai>
+	</template>
+</category>
+
+<category> 
+	<pattern>No</pattern>
+	<that>No entendí bien tu pregunta quieres saber que deportes puedes practicar en la ESEI</that>
+	<template>Entendido.</template> 
+</category>
+
+<category> 
+	<pattern>^ actividades deportivas ^</pattern> 
+	<template>
+		<think>
+			<set name="aux1"><star/></set>
+			<set name="aux2"><star index="2"/></set>
+		</think>
+		No entendí bien tu pregunta, quieres saber que actividades deportivas puedes practicar en la ESEI?
+	</template> 
+</category>
+
+<category> 
+	<pattern>Si</pattern> 
+	<that>No entendí bien tu pregunta quieres saber que actividades deportivas puedes practicar en la ESEI</that>
+	<template>
+		<!--Evitar valores unknown-->
+		<condition name="aux1">
+			<li value="unknown"><set name="aux1"></set></li>
+		</condition>
+		<condition name="aux2">
+			<li value="unknown"><set name="aux2"></set></li>
+		</condition>
+		<learn>
+			<category>
+				<pattern><eval><get name="aux1"/></eval> actividades deportivas <eval><get name="aux2"/></eval></pattern>
+				<template><srai>PREG18</srai></template>
+			</category>
+		</learn>
+		<srai>PREG18</srai>
+	</template>
+</category>
+
+<category> 
+	<pattern>No</pattern>
+	<that>No entendí bien tu pregunta quieres saber que actividades deportivas puedes practicar en la ESEI</that>
+	<template>Entendido.</template> 
+</category>
+
+</aiml>

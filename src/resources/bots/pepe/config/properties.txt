@@ -1,0 +1,14 @@
+name:entrega
+version:0.0.1
+nombre:juanito2
+edad:21
+genero:agénero
+asignaturas:10
+creditos:60
+pelo:rubio
+ojos:azules
+procedencia:Alemania
+programado:aiml
+colorf:naranja
+
+

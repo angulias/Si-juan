@@ -1,0 +1,8 @@
+  
+// Agent juan in project prueba.mas2j
+
++question(H)[source(A)]
+  <- .print("He recibido la pregunta: ",H," de ", A);
+     chat(H).
+     /* TODO: Pillar la respuesta del chat*/
+     //.send(A,tell,answer(Ans)).

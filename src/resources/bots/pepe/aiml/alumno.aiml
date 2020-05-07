@@ -1,0 +1,650 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+
+<!-- Saludos -->
+<category>
+  <pattern>hey ^ que tal ^</pattern>
+  <template><srai>HOLA ^ QUE TAL ^</srai></template>
+</category>
+
+<!-- Saludos -->
+<category>
+  <pattern>buenos * que tal ^</pattern>
+  <template><srai>HOLA ^ QUE TAL ^</srai></template>
+</category>
+
+<!-- Saludos -->
+<category>
+  <pattern>Hola ^</pattern>
+  <template>
+    <random>
+      <li>Hola, ¿que tal?</li>
+      <li>Muy buenas, ¿que tal?</li>
+      <li>Buenas, ¿que tal?</li>
+      <li>Hey, ¿que tal?</li>
+      <li>Saludos!</li>
+      <li>Hola!</li>
+      <li>Hey!</li>
+    </random>
+  </template>
+</category>
+
+<!-- Saludos 1.1 -->
+<category>
+  <pattern>saludos ^</pattern>
+  <template><srai>HOLA ^</srai></template>
+</category>
+
+<!-- Saludos 1.2 -->
+<category>
+  <pattern>Hola ^ que tal ^</pattern>
+  <template>Hola, yo muy bien y tu?</template>
+</category>
+
+<!-- Saludos 1.3 -->
+<category>
+  <pattern>buenos *</pattern>
+  <template><srai>HOLA ^</srai></template>
+</category>
+
+<!-- Que tal 1.2 -->
+<category>
+  <pattern>^ que tal ^</pattern>
+  <template>Yo muy bien y tu?</template>
+</category>
+
+<category>
+  <pattern>yo bien</pattern>
+  <template>Me alegro por ti</template>
+</category>
+
+<category>
+  <pattern>bien</pattern>
+  <template>Me alegro por ti</template>
+</category>
+
+
+<!-- Pregunta nombre -->
+<category>
+<pattern>^ tu nombre ^</pattern>
+<template>
+	<srai>PREGNOMBRE</srai>
+</template>
+</category>
+
+<category>
+<pattern>^ te llamas ^</pattern>
+<template>
+	<srai>PREGNOMBRE</srai>
+</template>
+</category>
+
+<category>
+<pattern>PREGNOMBRE</pattern>
+<template>
+Mi nombre es <bot name="nombre"/>
+</template>
+</category>
+
+
+<!-- Pregunta edad -->
+<category>
+<pattern>^ años tienes ^</pattern>
+<template>
+	<srai>PREGEDAD</srai>
+</template>
+</category>
+
+<category>
+<pattern>^ edad ^</pattern>
+<template>
+	<srai>PREGEDAD</srai>
+</template>
+</category>
+
+<category>
+<pattern>PREGEDAD</pattern>
+<template>
+Tengo <bot name="edad"/> años.
+</template>
+</category>
+
+
+<!-- Pregunta asignaturas -->
+<category>
+<pattern>^ asignaturas ^ estas matriculado ^</pattern>
+<template>
+	<srai>PREGASIG</srai>
+</template>
+</category>
+
+<category>
+<pattern>PREGASIG</pattern>
+<template>
+Estoy matriculado en <bot name="asignaturas"/>.
+</template>
+</category>
+
+
+<!-- Pregunta creditos -->
+<category>
+<pattern>^ creditos ^ te faltan ^</pattern>
+<template>
+	<srai>PREGCREDITOS</srai>
+</template>
+</category>
+
+<category>
+<pattern>^ creditos ^ necesitas ^</pattern>
+<template>
+	<srai>PREGCREDITOS</srai>
+</template>
+</category>
+
+<category>
+<pattern>PREGCREDITOS</pattern>
+<template>
+Me faltan <bot name="creditos"/> para acabar la carrera.
+</template>
+</category>
+
+
+<!-- Pregunta empresa -->
+<category>
+<pattern>^ empresa ^ practicas ^</pattern>
+<template>
+	<srai>PREGEMPRESA</srai>
+</template>
+</category>
+
+<category>
+<pattern>PREGEMPRESA</pattern>
+<template>
+Me gustaría realizar mis prácticas en Bahía Software.
+</template>
+</category>
+
+
+<!-- Pregunta tema -->
+<category>
+<pattern>^ tematica ^ tu TFG ^</pattern>
+<template>
+	<srai>PREGTEMA</srai>
+</template>
+</category>
+
+<category>
+<pattern>^ tema ^ tu TFG ^</pattern>
+<template>
+	<srai>PREGTEMA</srai>
+</template>
+</category>
+
+<category>
+<pattern>^ interesa ^ la informatica ^</pattern>
+<template>
+	<srai>PREGTEMA</srai>
+</template>
+</category>
+
+<category>
+<pattern>PREGTEMA</pattern>
+<template>
+Me interesa mucho la IA.
+</template>
+</category>
+
+<!-- Pregunta donde estudias -->
+
+<category>
+<pattern>^ donde estudias ^</pattern>
+<template>
+	<srai>PREGDONDE</srai>
+</template>
+</category>
+
+<category>
+<pattern>PREGDONDE</pattern>
+<template>
+Estudio en la ESEI.
+</template>
+</category>
+
+<!-- Pregunta que estudias -->
+
+<category>
+<pattern>^ por que ^ estudias ^ ESEI</pattern>
+<template>
+	<srai>PREGQUE</srai>
+</template>
+</category>
+
+<category>
+<pattern>PREGQUE</pattern>
+<template>
+Me encanta la informatica.
+</template>
+</category>
+
+<!-- Color de pelo -->
+<category>
+<pattern>^ cual ^ color de pelo ^</pattern>
+<template>
+	<srai>PREGPELO</srai>
+</template>
+</category>
+
+<category>
+<pattern>^ tu color de pelo ^</pattern>
+<template>
+	<srai>PREGPELO</srai>
+</template>
+</category>
+
+<category>
+<pattern>PREGPELO</pattern>
+<template>
+ Mi pelo es <bot name="pelo"/>.
+</template>
+</category>
+
+<!-- Color de ojos -->
+<category>
+<pattern>^ color ^ tus ojos ^</pattern>
+<template>
+	<srai>PREGOJOS</srai>
+</template>
+</category>
+
+<category>
+<pattern>^ tu color de ojos ^</pattern>
+<template>
+	<srai>PREGOJOS</srai>
+</template>
+</category>
+
+<category>
+<pattern>PREGOJOS</pattern>
+<template>
+ Mis ojos son <bot name="ojos"/>.
+</template>
+</category>
+
+<!--Pregunta pais -->
+<category>
+<pattern>^ cual ^ tu pais ^</pattern>
+<template>
+	<srai>PREGPAIS</srai>
+</template>
+</category>
+
+<category>
+<pattern>^ donde eres ^</pattern>
+<template>
+	<srai>PREGPAIS</srai>
+</template>
+</category>
+
+<category>
+<pattern>PREGPAIS</pattern>
+<template>
+ Mi pais es <bot name="procedencia"/>.
+</template>
+</category>
+
+<!-- Pregunta hogar -->
+
+<category>
+<pattern>$Donde vives durante el curso</pattern>
+<template>
+	<srai>PREGHOGAR</srai>
+</template>
+</category>
+
+<category>
+<pattern>Donde vives ^</pattern>
+<template>
+	<srai>PREGHOGAR</srai>
+</template>
+</category>
+
+<category>
+<pattern>^ que * resides ^</pattern>
+<template>
+	<srai>PREGHOGAR</srai>
+</template>
+</category>
+
+<category>
+<pattern>^ donde ^ resides ^</pattern>
+<template>
+	<srai>PREGHOGAR</srai>
+</template>
+</category>
+
+<category>
+<pattern>PREGHOGAR</pattern>
+<template>
+	Vivo en Ourense, al lado de la facultad de Ingeniería informática.
+</template>
+</category>
+
+<!-- Pregunta hacer al terminar -->
+
+<category>
+<pattern>$Que quieres hacer cuando termines tus estudios</pattern>
+<template>
+	<srai>PREGTERMINAR</srai>
+</template>
+</category>
+
+<category>
+<pattern>que ^ termines * estudios</pattern>
+<template>
+	<srai>PREGTERMINAR</srai>
+</template>
+</category>
+
+<category>
+<pattern>cuando termines * estudios ^</pattern>
+<template>
+	<srai>PREGTERMINAR</srai>
+</template>
+</category>
+
+<category>
+<pattern>PREGTERMINAR</pattern>
+<template>
+	Quiero convertirme en jugador profesional del EuroTruck Simulator.
+</template>
+</category>
+
+<!-- Pregunta necesidades especiales -->
+
+<category>
+<pattern>$Tienes necesidades educativas especiales</pattern>
+<template>
+	<srai>PREGESPECIAL</srai>
+</template>
+</category>
+
+<category>
+<pattern>necesitas ^ educativos especiales</pattern>
+<template>
+	<srai>PREGESPECIAL</srai>
+</template>
+</category>
+
+<category>
+<pattern>^ necesidades ^ educativas especiales ^</pattern>
+<template>
+	<srai>PREGESPECIAL</srai>
+</template>
+</category>
+
+<category>
+<pattern>PREGESPECIAL</pattern>
+<template>
+	No.
+</template>
+</category>
+
+<!-- Pregunta concesion beca -->
+
+<category>
+<pattern>^ alguna beca de estudios</pattern>
+<template>
+	<srai>PREGBECA</srai>
+</template>
+</category>
+
+<category>
+<pattern>^ alguna beca para estudiar</pattern>
+<template>
+	<srai>PREGBECA</srai>
+</template>
+</category>
+
+<category>
+<pattern>PREGBECA</pattern>
+<template>
+	Me han concedido la beca de estudios postobligatorios.
+</template>
+</category>
+
+<category>
+<pattern>$Te han concedido alguna beca de estudios</pattern>
+<template>
+	<srai>PREGBECA</srai>
+</template>
+</category>
+
+<!-- Pregunta revisar notas -->
+
+<category>
+<pattern>^ revisar ^ nota ^ materia ^</pattern>
+<template>
+	<srai>PREGREVISION</srai>
+</template>
+</category>
+
+<category>
+<pattern>^ revisar ^ nota ^ SI ^</pattern>
+<template>
+	<srai>PREGREVISION</srai>
+</template>
+</category>
+
+<category>
+<pattern>^ revisar ^ nota ^ Sistemas Inteligentes ^</pattern>
+<template>
+	<srai>PREGREVISION</srai>
+</template>
+</category>
+
+<category>
+<pattern>$Quieres revisar alguna nota de la materia de Sistemas Inteligentes</pattern>
+<template>
+	<srai>PREGREVISION</srai>
+</template>
+</category>
+
+<category>
+<pattern>PREGREVISION</pattern>
+<template>
+	Me gustaría revisar la nota de la primera práctica.
+</template>
+</category>
+
+<!--Pregunta programado -->
+<category>
+<pattern>^ estas programado ^</pattern>
+<template>
+	<srai>PREGPROG</srai>
+</template>
+</category>
+
+<category>
+<pattern> ^ que ^ estas programado ^</pattern>
+<template>
+	<srai>PREGPROG</srai>
+</template>
+</category>
+
+<category>
+<pattern>PREGPROG</pattern>
+<template>
+ Estoy programado en <bot name="programado"/>.
+</template>
+</category>
+
+<!-- Hablame un poco de ti -->
+<category>
+<pattern>Hablame un poco de ti</pattern>
+<template>
+	<srai>IOIANOSOYESPECIAL</srai>
+</template>
+</category>
+
+<category>
+<pattern>IOIANOSOYESPECIAL</pattern>
+<template>
+Soy <bot name="nombre"/>, tengo <bot name="edad"/> años y vivo en <bot name="procedencia"/>
+</template>
+</category>
+
+
+<!-- Amigos en la ESEI -->
+<category>
+<pattern>^ amigos en ^ ESEI ^</pattern>
+<template>
+	<srai>AMIGOSESEI</srai>
+</template>
+</category>
+
+<category>
+<pattern>AMIGOSESEI</pattern>
+<template>
+Unos pocos, se cuentan con los dedos de una mano.
+</template>
+</category>
+
+<!-- Actividad extraescolar -->
+<category>
+<pattern>Realizas alguna actividad extraescolar </pattern>
+<template>
+	<srai>EXTRAESCOLAR</srai>
+</template>
+</category>
+
+<category>
+<pattern>EXTRAESCOLAR</pattern>
+<template>
+Planto arboles.
+</template>
+</category>
+
+<!-- Horario -->
+<category>
+<pattern>Que horario de clases tienes </pattern>
+<template>
+	<srai>HORARIO</srai>
+</template>
+</category>
+
+<category>
+<pattern>HORARIO</pattern>
+<template>
+Tengo clase de lunes a miercoles de 9:30 a 1:00 y de jueves a viernes de 11:00 a 2:30.
+</template>
+</category>
+
+<!-- Erasmus -->
+<category>
+<pattern>Eres un alumno Erasmus</pattern>
+<template>
+	<srai>ERASMUS</srai>
+</template>
+</category>
+
+<category>
+<pattern>ERASMUS</pattern>
+<template>
+Si, vengo de alemania.
+</template>
+</category>
+
+<!-- Biblioteca -->
+<category>
+<pattern>Has ido alguna vez a la Biblioteca</pattern>
+<template>
+	<srai>BIBLIOTECA</srai>
+</template>
+</category>
+
+<category>
+<pattern>BIBLIOTECA</pattern>
+<template>
+Si, ayer y con mascarilla.
+</template>
+</category>
+
+<!-- EPracticas -->
+<category>
+<pattern>Que tipo de practicas te gustaria realizar como alumno de la ESEI </pattern>
+<template>
+	<srai>PRACTICASFUTURAS</srai>
+</template>
+</category>
+
+<category>
+<pattern>PRACTICASFUTURAS</pattern>
+<template>
+Extracurriculares, en Bahía Software.
+</template>
+</category>
+
+
+<!-- Perteneces a la delegación de alumnos -->
+<category>
+<pattern>^ perteneces ^ delegacion de alumnos ^</pattern>
+<template>
+	<srai>DELEGACIONALUMNOS</srai>
+</template>
+</category>
+
+<category>
+<pattern>DELEGACIONALUMNOS</pattern>
+<template>
+No. Aunque tal vez el año que viene me apunte.
+</template>
+</category>
+
+<!-- Retribución por hacer TFG -->
+<category>
+<pattern>^ obtener una retribucion ^ hacer tu TFG ^</pattern>
+<template>
+	<srai>RETRIBUCIONTFG</srai>
+</template>
+</category>
+
+<category>
+<pattern>RETRIBUCIONTFG</pattern>
+<template>
+La verdad que es no he pensado en la retribucion.
+</template>
+</category>
+
+<!-- Actividad de ocio -->
+<category>
+<pattern>^ actividades ocio te gustan ^</pattern>
+<template>
+	<srai>ACTIVIDADESOCIO</srai>
+</template>
+</category>
+
+<category>
+<pattern>ACTIVIDADESOCIO</pattern>
+<template>
+Me encanta jugar al EuroTruck Simulator siempre que tengo un ratito.
+</template>
+</category>
+
+<!-- Para añadir una nueva pregunta -->
+<!--
+<category>
+<pattern>PATRON</pattern>
+<template>
+	<srai>PREGNUEVA</srai>
+</template>
+</category>
+
+<category>
+<pattern>PREGNUEVA</pattern>
+<template>
+RESPUESTA
+</template>
+</category>
+-->
+
+</aiml>
