@@ -103,6 +103,26 @@
 0,COMO ESTA *,*,*,No se,asistente.aiml
 0,* ESTA ^,NO SE,*,<think>#Newline		<set var="estado"><srai>Como esta <star/></srai></set>#Newline		</think>#Newline		<condition var="estado">#Newline		<li value="No se">#Newline			<learn>#Newline				<category>#Newline				<pattern>#Newline					Como esta <eval><star/></eval>#Newline				</pattern>#Newline				<template>#Newline					<eval><star/></eval> esta <eval><star index="2"/></eval>#Newline				</template>#Newline				</category>#Newline			</learn>#Newline			Recordare que <star/> esta <star index="2"/>.#Newline		</li>#Newline		</condition>,asistente.aiml
 0,NO,*,*,Vaya.,asistente.aiml
-0,ENVIA A * CON EL TEMA * EL MENSAJE *,*,*,<mail>#Newline		<subject><star index="2"/></subject>#Newline		<to><star/>@mail.gal</to>#Newline		<msg><star index="3"/></msg>#Newline	</mail>,asistente.aiml
-0,ENVIA EL SIGUIENTE MENSAJE SOBRE EL TEMA * A * QUE DIGA *,*,*,<mail>#Newline		<subject><star/></subject>#Newline		<to><star index="2"/>@mail.gal</to>#Newline		<msg><star index="3"/></msg>#Newline	</mail>,asistente.aiml
+0,$ENVIA A * CON EL TEMA * EL MENSAJE *,*,*,<mail>#Newline		<subject><star index="2"/></subject>#Newline		<to><star/>@mail.gal</to>#Newline		<msg><star index="3"/></msg>#Newline	</mail>,asistente.aiml
+0,$ENVIA EL SIGUIENTE MENSAJE SOBRE EL TEMA * A * QUE DIGA *,*,*,<mail>#Newline		<subject><star/></subject>#Newline		<to><star index="2"/>@mail.gal</to>#Newline		<msg><star index="3"/></msg>#Newline	</mail>,asistente.aiml
+0,$SOY * Y QUIERO DARME DE ALTA EN *,*,*,<think>#Newline<set var="alumnos"><map name="asignaturas"><star index="2"/></map></set>#Newline</think>#NewlineHola <star/>#Comma <srai>ES ALUMNO <star/> DE <star index="2"/> </srai> <star index="2"/>,asistente.aiml
+0,ES ALUMNO * DE * ^,*,*,<think>#Newline<set var="alumno1"><star/></set>#Newline</think>#Newline#Newline<condition var="alumno1">#Newline#Newline<li><value><star index="2"/> </value> ya estás dado de alta en </li>#Newline#Newline<li> <srai>Es Alumno <star/> de <star index="3"/></srai></li>#Newline#Newline</condition>,asistente.aiml
+0,$QUIERO SOLICITAR UN ALTA EN FAITIC,*,*,Recibido dime tu nombre y materia.,asistente.aiml
+0,* Y MATERIA *,RECIBIDO DIME TU NOMBRE Y MATERIA,*,<mail>#Newline		<subject>cambio de grupo de <star index="3"/></subject>#Newline		<to>masterssia@gmail.com</to>#Newline		<msg>Soy <star/> y queria solicitar el cambio de grupo al <star index="2"/> en la materia <star index="3"/>.</msg>#Newline	</mail>,asistente.aiml
+0,$QUIERO SOLICITAR UN CAMBIO DE GRUPO REDUCIDO,*,*,Recibido dime tu nombre grupo y materia.,asistente.aiml
+0,* AL GRUPO * DE ^,RECIBIDO DIME TU NOMBRE GRUPO Y MATERIA,*,<mail>#Newline		<subject>cambio de grupo de <star index="3"/></subject>#Newline		<to>masterssia@gmail.com</to>#Newline		<msg>Soy <star/> y queria solicitar el cambio de grupo al <star index="2"/> en la materia <star index="3"/>.</msg>#Newline	</mail>,asistente.aiml
+0,$QUERIA RESERVAR UN SEMINARIO,*,*,Recibido dime tu nombre el seminario y el dia.,asistente.aiml
+0,* Y EL SEMINARIO * ^,RECIBIDO DIME TU NOMBRE EL SEMINARIO Y EL DIA,*,<mail>#Newline		<subject>reservar seminario</subject>#Newline		<to>masterssia@gmail.com</to>#Newline		<msg>Soy <star/> y queria reservar el seminario <star index="2"/> <star index="3"/>.</msg>#Newline	</mail>,asistente.aiml
+0,$SOLICITO LA ASIGNACION DE PRACTICAS,*,*,Recibido dime tu nombre y la empresa elegida.,asistente.aiml
+0,* CON LA EMPRESA *,RECIBIDO DIME TU NOMBRE Y LA EMPRESA ELEGIDA,*,<mail>#Newline		<subject>asignacion de practicas</subject>#Newline		<to>masterssia@gmail.com</to>#Newline		<msg>Soy <star/> y queria solicitar la asignacion de practicas en la empresa <star index="2"/>.</msg>#Newline	</mail>,asistente.aiml
+0,$QUIERO ELEGIR UN TFG,*,*,Recibido dime tu nombre y el tfg elegido.,asistente.aiml
+0,^ CON TFG ^,RECIBIDO DIME TU NOMBRE Y EL TFG ELEGIDO,*,<mail>#Newline		<subject>solicitud de tfg</subject>#Newline		<to>masterssia@gmail.com</to>#Newline		<msg>Soy <star/> y solicito el tfg <star index="2"/> de los que hay propuestos.</msg>#Newline	</mail>,asistente.aiml
+0,$QUIERO PROPONER UN TFG,*,*,Recibido dime tu nombre y la tematica.,asistente.aiml
+0,* CON TEMATICA *,RECIBIDO DIME TU NOMBRE Y LA TEMATICA,*,<mail>#Newline		<subject>propuesta de tfg</subject>#Newline		<to>masterssia@gmail.com</to>#Newline		<msg>Soy <star/> y propongo un tfg con tematica <star index="2"/>.</msg>#Newline	</mail>,asistente.aiml
+0,$QUIERO SOLICITAR LA DEFENSA DE MI TFG,*,*,Recibido dime tu nombre dni y la tematica del tfg.,asistente.aiml
+0,* CON DNI * Y TEMATICA *,RECIBIDO DIME TU NOMBRE DNI Y LA TEMATICA DEL TFG,*,<mail>#Newline		<subject>propuesta de la defensa del tfg</subject>#Newline		<to>masterssia@gmail.com</to>#Newline		<msg>Soy <star/> con dni <star index="2"/> y con la tematica de <star index="3"/>.</msg>#Newline	</mail>,asistente.aiml
+0,$QUIERO SOLICITAR UNA EVALUACION POR COMPENSACION,*,*,Recibido dime tu nombre y la materia.,asistente.aiml
+0,* Y MATERIA *,RECIBIDO DIME TU NOMBRE Y LA MATERIA,*,<mail>#Newline		<subject>solicitud de evaluacion por compensacion</subject>#Newline		<to>masterssia@gmail.com</to>#Newline		<msg>Soy <star/> y quiero solicitar la evaluacion por compensacion en <star index="2"/>.</msg>#Newline	</mail>,asistente.aiml
+0,$CREA UN ARCHIVO DE NOMBRE *,*,*,<file><star/></file>,asistente.aiml
+0,$AÑADE AL ARCHIVO * EL TEXTO *,*,*,<addtxt><txt><star index="2"/></txt> to <file><star/></file></addtxt>,asistente.aiml
 0,*,*,*,Puedes repetir porfavor#Comma no te entiendo.,asistente.aiml

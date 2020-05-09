@@ -7,7 +7,13 @@ numAnswer(1).
 
 service(Answer, mailing):-
 	checkTag("<mail>",Answer).
-service(Answer, addingFile):-
+service(Answer, creatingSet):-
+	checkTag("<addset>",Answer) &
+	not checkTag("<new>",Answer).
+service(Answer, addingSet):-
+	checkTag("<addset>",Answer) &
+	checkTag("<new>",Answer).
+service(Answer, addingfile):-
 	checkTag("<addtxt>", Answer).
 service(Answer, creatingFile):-
 	checkTag("<file>", Answer) &
@@ -40,28 +46,11 @@ doService(mailing, String, "done") :-
 	getValTag("<subject>", String, Subject) &
 	getValTag("<msg>", String, Msg).
 	//gui.mailing(To,Subject,Msg).
-	
-doService(creatingFile, String, "done") :-
-	getValTag("<file>", String, Name) &
-	gui.creatingFile(Name).
 
-doService(addingFile, String, "done") :-
-	getValTag("<txt>", String, Txt) &
-	getValTag("<file>", String, File) &
-	gui.writingOn(Txt,File).
-	
 // Filter the answer to be showed when the service indicated as second arg is done
 
 filter(Answer, mailing, "Ya he enviado el mensaje como me pediste."):-
 	doService(mailing, Answer, Done) &
-	Done = "done".
-	
-filter(Answer, creatingFile, "Ya esta creado el archivo como pediste.") :-
-	doService(creatingFile, Answer, Done) &
-	Done = "done".
-	
-filter(Answer, addingFile, "Ya se ha añadido el texto al archivo como pediste.") :-
-	doService(addingFile, Answer, Done) &
 	Done = "done".
 
 

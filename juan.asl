@@ -1,7 +1,7 @@
   
 // Agent juan in project prueba.mas2j
 
-+!eliminar <- .abolish(question(" si ")); !eliminar.
++!eliminar <- .abolish(question(H)); !eliminar.
 +!eliminar.
 
 +question(H)[source(A)]

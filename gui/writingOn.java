@@ -41,11 +41,13 @@ public class writingOn extends DefaultInternalAction {
 		// get the route
         String ruta = ((StringTerm)args[1]).getString();
 
-		File archivo = new File(ruta);
-        BufferedWriter bw;
+	
 
 		String resourcesPath = getResourcesPath();
 		System.out.println("El path actual es "+resourcesPath);
+		
+		File archivo = new File(resourcesPath+ruta);
+        BufferedWriter bw;
 		/*
 		
 		*/

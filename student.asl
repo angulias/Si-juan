@@ -1,24 +1,8 @@
 // Agent student in project prueba.mas2j
  
 /* FIltros */
-service(Answer, translating):-
-	checkTag("<translate>",Answer).
 service(Answer, mailing):-
 	checkTag("<mail>",Answer).
-service(Answer, addingBot):-
-	checkTag("<botprop>",Answer).
-service(Answer, creatingSet):-
-	checkTag("<addset>",Answer) &
-	not checkTag("<new>",Answer).
-service(Answer, addingSet):-
-	checkTag("<mail>",Answer) &
-	checkTag("<new>",Answer).
-service(Answer, creatingMap):-
-	checkTag("<addmap>",Answer) &
-	not checkTag("<new>",Answer).
-service(Answer, addingMap):-
-	checkTag("<addmap>",Answer) &
-	checkTag("<new>",Answer).
 service(Answer, addingfile):-
 	checkTag("<addtxt>", Answer).
 service(Answer, creatingFile):-
@@ -142,6 +126,19 @@ aq(18, " Que actividades ocio te gustan mas ").
 
 sv(1, " Envia a anacleto con el tema puta mierda el mensaje esto es una puta mierda. ").
 sv(2, " Envia el siguiente mensaje sobre el tema gatos a danielopes que diga el mensaje esesto y ya estaria. ").
+sv(3, " Quiero solicitar un alta en faitic. ").
+sv(4, " Quiero solicitar un cambio de grupo reducido. ").
+sv(5, " Queria reservar un seminario. ").
+sv(6, " Solicito la asignacion de practicas. ").
+sv(7, " Quiero elegir un tfg. ").
+sv(8, " Quiero proponer un tfg. ").
+sv(9, " Quiero solicitar la defensa de mi tfg. ").
+sv(10, " Quiero solicitar una evaluacion por compensacion. ").
+
+cv(1, " Crea un archivo de nombre pollito lindo. ").
+cv(2, " Crea un archivo de nombre pollito malo. ").
+cv(3, " Añade al archivo pollito malo el texto en verdad si que eres un pollito malo. ").
+cv(4, " Añade al archivo pollito lindo el texto en verdad si que eres un pollito lindo. ").
 
 respuesta(1).
 
@@ -156,14 +153,18 @@ respuesta(1).
 	!tqreset;
 	!aqreset;
 	!svreset;
-    /*.println("Preguntas obligatorias tq y las ntq");
+	!cvreset;
+   .println("Preguntas obligatorias tq y las ntq");
 	!level0;
 	.wait(12000);
     .println("Preguntas obligatorias aq");
 	!level1;
-	.wait(2000);*/
+	.wait(2000);
 	.println("solicitudes anexo 2 wowUWU");
 	!level2;
+	.wait(2000);
+	.println("Archivos y demas cosas");
+	!level3;
 	.wait(4000).
 
 +!tqreset : dotq(N,Str) <- -dotq(N,Str); +tq(N,Str); !tqreset.
@@ -174,6 +175,9 @@ respuesta(1).
 
 +!svreset : dosv(N,Str) <- -dosv(N,Str); +sv(N,Str); !svreset.
 +!svreset.
+
++!cvreset : docv(N,Str) <- -docv(N,Str); +cv(N,Str); !cvreset.
++!cvreset.
 
 +!select(N,Answer) : dotq(N,_) <- ?tq(New,Answer); -tq(New,Answer); +dotq(New,Answer).
 +!select(N,Answer) : not dotq(N,_) & tq(N,Answer) <- -tq(N,Answer); +dotq(N,Answer).
@@ -190,6 +194,10 @@ respuesta(1).
 +!chooseb(N,Answer) : dosv(N,_) <- ?sv(New,Answer); -sv(New,Answer); +dosv(New,Answer).
 +!chooseb(N,Answer) : not dosv(N,_) & sv(N,Answer) <- -sv(N,Answer); +dosv(N,Answer).
 +!chooseb(0,Answer) : sv(N,Answer) <- -sv(N,Answer); +dosv(N,Answer).
+
++!choosec(N,Answer) : docv(N,_) <- ?cv(New,Answer); -cv(New,Answer); +docv(New,Answer).
++!choosec(N,Answer) : not docv(N,_) & cv(N,Answer) <- -cv(N,Answer); +docv(N,Answer).
++!choosec(0,Answer) : cv(N,Answer) <- -cv(N,Answer); +docv(N,Answer).
 
 +!responder(N,Answer) : .substring( "No entendí bien tu pregunta" , Answer )  <- .send(juan,tell,question(" si ")); !responder.
 +!responder.
@@ -238,8 +246,8 @@ respuesta(1).
 	
 	
 +!level2 <-
-	for (.range(I,1,1)) {
-		Sel = math.round(math.random(1))+1;
+	for (.range(I,1,5)) {
+		Sel = math.round(math.random(9))+1;
 		.println("servicio seleccionado: ", Sel," <===============================");
 		.println;
 		!chooseb(Sel,Ans);
@@ -247,9 +255,24 @@ respuesta(1).
 		.send(juan,tell,question(Ans));
 		.wait(2100);
 		.println;
-		.println("===================FIN=====================");
+		.abolish(answer("Se ha realizado de forma correcta el servicio solicitado mailing"));
+		.println("===========================================");
 	}.
 
++!level3 <-
+	for (.range(I,1,2)) {
+		Sel = math.round(math.random(3))+1;
+		.println("servicios de archivo seleccionado: ", Sel," <===============================");
+		.println;
+		!choosec(Sel,Ans);
+		//chat(Ans);
+		.send(juan,tell,question(Ans));
+		.wait(2100);
+		.println;
+		.abolish(answer("Se ha realizado de forma correcta el servicio solicitado creatingFile"));
+		.println("===========================================");
+	}.	
+	
 /* Manejo de respuestas */
 +answer(Answer) : .substring( "No entendí bien tu pregunta" , Answer ) & not service(Answer,service) <- 
 	.println("=============================================");
@@ -258,6 +281,102 @@ respuesta(1).
 	.println;
 	.println("=============================================");
 	!responder(N,Answer);
+	.println;
+	.wait(400).
+
+// 1
+	
++answer(Answer) : .substring( "Recibido dime tu nombre y materia" , Answer ) & not service(Answer,service) <- 
+	.println("=============================================");
+	.println;
+	.println("Acabo de recibir de Juanito la contestación ", Answer);
+	.println;
+	.send(juan,tell,question(" Angel y materia SI "));
+	.println("=============================================");
+	.println;
+	.wait(400).		
+
+// 2 
+	
++answer(Answer) : .substring( "Recibido dime tu nombre grupo y materia" , Answer ) & not service(Answer,service) <- 
+	.println("=============================================");
+	.println;
+	.println("Acabo de recibir de Juanito la contestación ", Answer);
+	.println;
+	.send(juan,tell,question(" Angel al grupo 4 de SI "));
+	.println("=============================================");
+	.println;
+	.wait(400).		
+
+// 3
+	
++answer(Answer) : .substring( "Recibido dime tu nombre el seminario y el dia" , Answer ) & not service(Answer,service) <- 
+	.println("=============================================");
+	.println;
+	.println("Acabo de recibir de Juanito la contestación ", Answer);
+	.println;
+	.send(juan,tell,question(" Angel y el seminario 30b a las 3 del lunes "));
+	.println("=============================================");
+	.println;
+	.wait(400).		
+
+// 4
+	
++answer(Answer) : .substring( "Recibido dime tu nombre y la empresa elegida" , Answer ) & not service(Answer,service) <- 
+	.println("=============================================");
+	.println;
+	.println("Acabo de recibir de Juanito la contestación ", Answer);
+	.println;
+	.send(juan,tell,question(" Angel con la empresa Imatia "));
+	.println("=============================================");
+	.println;
+	.wait(400).		
+
+// 5
+	
++answer(Answer) : .substring( "Recibido dime tu nombre y el tfg elegido" , Answer ) & not service(Answer,service) <- 
+	.println("=============================================");
+	.println;
+	.println("Acabo de recibir de Juanito la contestación ", Answer);
+	.println;
+	.send(juan,tell,question(" Angel con tfg pollito"));
+	.println("=============================================");
+	.println;
+	.wait(400).	
+
+// 6
+	
++answer(Answer) : .substring( "Recibido dime tu nombre y la tematica" , Answer ) & not service(Answer,service) <- 
+	.println("=============================================");
+	.println;
+	.println("Acabo de recibir de Juanito la contestación ", Answer);
+	.println;
+	.send(juan,tell,question(" Angel con tematica pollito lindo"));
+	.println("=============================================");
+	.println;
+	.wait(400).		
+
+// 7	
+	
++answer(Answer) : .substring( "Recibido dime tu nombre dni y la tematica del tfg" , Answer ) & not service(Answer,service) <- 
+	.println("=============================================");
+	.println;
+	.println("Acabo de recibir de Juanito la contestación ", Answer);
+	.println;
+	.send(juan,tell,question(" Angel con dni 17374938V y tematica pollito lindo"));
+	.println("=============================================");
+	.println;
+	.wait(400).
+
+// 8	
+	
++answer(Answer) : .substring( "Recibido dime tu nombre y la materia" , Answer ) & not service(Answer,service) <- 
+	.println("=============================================");
+	.println;
+	.println("Acabo de recibir de Juanito la contestación ", Answer);
+	.println;
+	.send(juan,tell,question(" Angel y materia SI"));
+	.println("=============================================");
 	.println;
 	.wait(400).
 	
@@ -272,3 +391,5 @@ respuesta(1).
 	.println;
 	.println("=============================================").	
 	
+	
+

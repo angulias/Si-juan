@@ -69,8 +69,8 @@ private static String getResourcesPath() {
 		path = path.substring(0, path.length() - 2);
 		System.out.println(path);
 		//logger.info(path);
-		String resourcesPath = path + File.separator + "src" + File.separator + "resources";
-		return resourcesPath;
+		//String resourcesPath = path + File.separator + "src" + File.separator + "resources";
+		return path;
 	}
 	
 }

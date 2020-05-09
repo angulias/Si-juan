@@ -26,34 +26,40 @@ import java.util.logging.Logger;
 
 
 
-/** internal action that allow the agent to create a file on the agent path */
+/** internal action that allow agents to use freetts to speak conversations */
 
-public class creatingFile extends DefaultInternalAction {
+public class writingOn extends DefaultInternalAction {
 
     //int runCount = 0;
 
     @Override
     public Object execute(final TransitionSystem ts, Unifier un, Term[] args) throws Exception {
 
+        // get the text
+		String text = ((StringTerm)args[0]).getString();	
+		
 		// get the route
-        String ruta = ((StringTerm)args[0]).getString();
-		
-		// get the path
- 		String actualPath = getResourcesPath();
-		System.out.println("El path actual es "+actualPath);
-		
-		// create the File
-		File archivo = new File(actualPath+ruta);
+        String ruta = ((StringTerm)args[1]).getString();
+
+		File archivo = new File(ruta);
         BufferedWriter bw;
+
+		String resourcesPath = getResourcesPath();
+		System.out.println("El path actual es "+resourcesPath);
+		/*
 		
-		try {
+		*/
+        try {
 			if(archivo.exists()) {
 				System.out.println("El fichero de texto ya estaba creado.");
 			} else {
 				archivo.createNewFile();
-				System.out.println("Acabo de crear el fichero de texto");
+				System.out.println("Acabo de crear el fichero de texto.");
 			}
 			bw = new BufferedWriter(new FileWriter(archivo,true));
+			PrintWriter out = new PrintWriter(bw);
+			out.println(text);
+			out.close();
 			bw.close();
           } 
 		catch (Exception eLabel) {

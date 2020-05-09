@@ -863,22 +863,52 @@ Vaya.
 
 
 <!--1º Alta en materia anexo 2  --> 
+
 <category>
-<pattern>$solicitar el alta en una materia en faitic</pattern>
+<pattern>$soy * y quiero darme de alta en * </pattern>
 <template>
-	Recibido! Que materia?
+<think>
+<set var="alumnos"><map name="asignaturas"><star index="2"/></map></set>
+</think>
+Hola <star/>, <srai>ES ALUMNO <star/> DE <star index="2"/> </srai> <star index="2"/></template>
+</category>
+
+<category>
+<pattern>Es Alumno * de * ^</pattern>
+<template>
+<think>
+<set var="alumno1"><star/></set>
+</think>
+
+<condition var="alumno1">
+
+<li><value><star index="2"/> </value> ya estás dado de alta en </li>
+
+<li> <srai>Es Alumno <star/> de <star index="3"/></srai></li>
+
+</condition>
+
+</template>
+
+</category>
+
+<!--1º Alta en materia anexo 2  --> 
+
+<category>
+<pattern>$quiero solicitar un alta en faitic</pattern>
+<template>
+	Recibido dime tu nombre y materia.
 </template>
 </category>
 
-
 <category>
-<pattern>*</pattern>
-<that>Recibido! Que materia?</that>
+<pattern>* y materia *</pattern>
+<that>RECIBIDO DIME TU NOMBRE Y MATERIA</that>
 <template>
 	<mail>
-		<subject>alta de <star/> en faitic</subject>
-		<to>faitic@mail.gal</to>
-		<msg>Solicito un alta de la materia <star/> en la plataforma faitic.</msg>
+		<subject>cambio de grupo de <star index="3"/></subject>
+		<to>masterssia@gmail.com</to>
+		<msg>Soy <star/> y queria solicitar el cambio de grupo al <star index="2"/> en la materia <star index="3"/>.</msg>
 	</mail>
 </template>
 </category>
@@ -886,25 +916,168 @@ Vaya.
 <!--2º cambio de grupo anexo 2  --> 
 
 <category>
-<pattern>$Solicitar un cambio de grupo reducido en una materia de la esei</pattern>
+<pattern>$quiero solicitar un cambio de grupo reducido</pattern>
 <template>
-	Recibido! Que grupo y que materia?
+	Recibido dime tu nombre grupo y materia.
 </template>
 </category>
 
-
 <category>
-<pattern>* de *</pattern>
-<that>Recibido! Que grupo y que materia?</that>
+<pattern>* al grupo * de ^</pattern>
+<that>RECIBIDO DIME TU NOMBRE GRUPO Y MATERIA</that>
 <template>
 	<mail>
-		<subject>cambio al grupo <star/></subject>
-		<to>faitic@mail.gal</to>
-		<msg>Solicito un cambio al grupo <star/> de la materia <star index="2"/></msg>
+		<subject>cambio de grupo de <star index="3"/></subject>
+		<to>masterssia@gmail.com</to>
+		<msg>Soy <star/> y queria solicitar el cambio de grupo al <star index="2"/> en la materia <star index="3"/>.</msg>
 	</mail>
 </template>
 </category>
 
+<!-- 3º realizar reserva seminario -->
+
+<category>
+<pattern>$queria reservar un seminario</pattern>
+<template>
+	Recibido dime tu nombre el seminario y el dia.
+</template>
+</category>
+
+<category>
+<pattern>* y el seminario * ^</pattern>
+<that>RECIBIDO DIME TU NOMBRE EL SEMINARIO Y EL DIA</that>
+<template>
+	<mail>
+		<subject>reservar seminario</subject>
+		<to>masterssia@gmail.com</to>
+		<msg>Soy <star/> y queria reservar el seminario <star index="2"/> <star index="3"/>.</msg>
+	</mail>
+</template>
+</category>
+
+<!-- 4º solicitar practicas empresa -->
+
+<category>
+<pattern>$solicito la asignacion de practicas</pattern>
+<template>
+	Recibido dime tu nombre y la empresa elegida.
+</template>
+</category>
+
+<category>
+<pattern>* con la empresa *</pattern>
+<that>RECIBIDO DIME TU NOMBRE Y LA EMPRESA ELEGIDA</that>
+<template>
+	<mail>
+		<subject>asignacion de practicas</subject>
+		<to>masterssia@gmail.com</to>
+		<msg>Soy <star/> y queria solicitar la asignacion de practicas en la empresa <star index="2"/>.</msg>
+	</mail>
+</template>
+</category>
+
+<!-- 5º solicitar un Tfg entre los propuestos -->
+
+
+<category>
+<pattern>$quiero elegir un tfg</pattern>
+<template>
+	Recibido dime tu nombre y el tfg elegido.
+</template>
+</category>
+
+<category>
+<pattern>^ con tfg ^</pattern>
+<that>RECIBIDO DIME TU NOMBRE Y EL TFG ELEGIDO</that>
+<template>
+	<mail>
+		<subject>solicitud de tfg</subject>
+		<to>masterssia@gmail.com</to>
+		<msg>Soy <star/> y solicito el tfg <star index="2"/> de los que hay propuestos.</msg>
+	</mail>
+</template>
+</category>
+
+<!-- 6º solicitar un Tfg no propuesto -->
+
+<category>
+<pattern>$quiero proponer un tfg</pattern>
+<template>
+	Recibido dime tu nombre y la tematica.
+</template>
+</category>
+
+<category>
+<pattern>* con tematica *</pattern>
+<that>RECIBIDO DIME TU NOMBRE Y LA TEMATICA</that>
+<template>
+	<mail>
+		<subject>propuesta de tfg</subject>
+		<to>masterssia@gmail.com</to>
+		<msg>Soy <star/> y propongo un tfg con tematica <star index="2"/>.</msg>
+	</mail>
+</template>
+</category>
+
+<!-- 7º solicitar defensa de Tfg -->
+
+<category>
+<pattern>$quiero solicitar la defensa de mi tfg</pattern>
+<template>
+	Recibido dime tu nombre dni y la tematica del tfg.
+</template>
+</category>
+
+<category>
+<pattern>* con dni * y tematica *</pattern>
+<that>RECIBIDO DIME TU NOMBRE DNI Y LA TEMATICA DEL TFG</that>
+<template>
+	<mail>
+		<subject>propuesta de la defensa del tfg</subject>
+		<to>masterssia@gmail.com</to>
+		<msg>Soy <star/> con dni <star index="2"/> y con la tematica de <star index="3"/>.</msg>
+	</mail>
+</template>
+</category>
+
+<!-- 8º solicitar evaluacion por compensacion de una materia -->
+
+<category>
+<pattern>$quiero solicitar una evaluacion por compensacion</pattern>
+<template>
+	Recibido dime tu nombre y la materia.
+</template>
+</category>
+
+<category>
+<pattern>* y materia *</pattern>
+<that>RECIBIDO DIME TU NOMBRE Y LA MATERIA</that>
+<template>
+	<mail>
+		<subject>solicitud de evaluacion por compensacion</subject>
+		<to>masterssia@gmail.com</to>
+		<msg>Soy <star/> y quiero solicitar la evaluacion por compensacion en <star index="2"/>.</msg>
+	</mail>
+</template>
+</category>
+
+<!-- Creacion de archivos -->
+
+<category>
+<pattern>$crea un archivo de nombre *</pattern>
+<template>
+	<file><star/></file>
+</template>
+</category>
+
+<!-- añadir texto a file -->
+
+<category>
+<pattern>$añade al archivo * el texto *</pattern>
+<template>
+	<addtxt><txt><star index="2"/></txt> to <file><star/></file></addtxt>
+</template>
+</category>
 
 <!-- Respuesta por defecto -->
 <category>
