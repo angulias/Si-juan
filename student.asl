@@ -1,6 +1,6 @@
-// Agent student in project prueba.mas2j
+// Agente Student
  
-/* FIltros */
+/* IdentificaciÃ³n de servicios */
 service(Answer, mailing):-
 	checkTag("<mail>",Answer).
 service(Answer, addingfile):-
@@ -9,11 +9,10 @@ service(Answer, creatingFile):-
 	checkTag("<file>", Answer) &
 	not service(Answer, addingfile).
 
-
 checkTag(Service, String) :-
 	.substring(Service,String).
 
-/* Initial beliefs and rules */
+/* Base de datos de preguntas */
 tq(1, " Hablame un poco sobre la Universidad de Vigo ").
 ntq(1, " Que me dices de la Universidad de Vigo ").
 ntq(2, " Puedes hablarme de la Universidad de Vigo ").
@@ -124,8 +123,8 @@ aq(16, " Has ido alguna vez a la Biblioteca ").
 aq(17, " Quieres revisar alguna nota de la materia de Sistemas Inteligentes ").
 aq(18, " Que actividades ocio te gustan mas ").
 
-sv(1, " Envia a anacleto con el tema puta mierda el mensaje esto es una puta mierda. ").
-sv(2, " Envia el siguiente mensaje sobre el tema gatos a danielopes que diga el mensaje esesto y ya estaria. ").
+sv(1, " Envia a anacleto con el tema asignatura si el mensaje este bot funciona muy bien. ").
+sv(2, " Envia el siguiente mensaje sobre el tema gatos a danielopes que diga el mensaje los gatos son muy adorables. ").
 sv(3, " Quiero solicitar un alta en faitic. ").
 sv(4, " Quiero solicitar un cambio de grupo reducido. ").
 sv(5, " Queria reservar un seminario. ").
@@ -135,10 +134,10 @@ sv(8, " Quiero proponer un tfg. ").
 sv(9, " Quiero solicitar la defensa de mi tfg. ").
 sv(10, " Quiero solicitar una evaluacion por compensacion. ").
 
-cv(1, " Crea un archivo de nombre pollito lindo. ").
-cv(2, " Crea un archivo de nombre pollito malo. ").
-cv(3, " Añade al archivo pollito malo el texto en verdad si que eres un pollito malo. ").
-cv(4, " Añade al archivo pollito lindo el texto en verdad si que eres un pollito lindo. ").
+cv(1, " Crea un archivo de nombre videojuegos. ").
+cv(2, " Crea un archivo de nombre peliculas. ").
+cv(3, " Inserta al archivo videojuegos el texto minecraft. ").
+cv(4, " Inserta al archivo peliculas el texto minecraft the film. ").
 
 respuesta(1).
 
@@ -149,21 +148,28 @@ respuesta(1).
 /* Plans */
 
 +!start : bot(created) <- 
-    /* TODO: Que cojones? */
 	!tqreset;
 	!aqreset;
 	!svreset;
 	!cvreset;
-   .println("Preguntas obligatorias tq y las ntq");
+	.println;
+   	.println("+++++++++++++ Preguntas obligatorias TQ y NTQ");
+	.println;
 	!level0;
 	.wait(12000);
-    .println("Preguntas obligatorias aq");
+	.println;
+    .println("+++++++++++++ Preguntas obligatorias AQ");
+	.println;
 	!level1;
 	.wait(2000);
-	.println("solicitudes anexo 2 wowUWU");
+	.println;
+	.println("+++++++++++++ Solicitudes Anexo II");
+	.println;
 	!level2;
 	.wait(2000);
-	.println("Archivos y demas cosas");
+	.println;
+	.println("+++++++++++++ Solicitud de otros servicios");
+	.println;
 	!level3;
 	.wait(4000).
 
@@ -199,11 +205,10 @@ respuesta(1).
 +!choosec(N,Answer) : not docv(N,_) & cv(N,Answer) <- -cv(N,Answer); +docv(N,Answer).
 +!choosec(0,Answer) : cv(N,Answer) <- -cv(N,Answer); +docv(N,Answer).
 
-+!responder(N,Answer) : .substring( "No entendí bien tu pregunta" , Answer )  <- .send(juan,tell,question(" si ")); !responder.
++!responder(N,Answer) : .substring( "No entendï¿½ bien tu pregunta" , Answer )  <- .send(juan,tell,question(" si ")); !responder.
 +!responder.
 
 +!level0 <-
-
 	for (.range(I,1,5)) {
 		Sel = math.round(math.random(17))+1;
 		.println;
@@ -213,22 +218,16 @@ respuesta(1).
 		.println;
 		.println("%%%%%%%%%%%%%%%%%%%%%% TRAZA DEL BOT %%%%%%%%%%%%%%%%%%%%%%%%");
 		.println;
-        /* TODO: Utilizar send(->juan.asl)*/
-		//chat(Ans);
 		.send(juan,tell,question(Ans));
 		.wait(4000);
-		
 		.println;
 		.println("%%%%%%%%%%%%%%%%%% REFORMULO LA PREGUNTA %%%%%%%%%%%%%%%%%%%%");
 		.println;
 		New = (Sel * 3) - math.round(math.random(2));
 		.println("Nueva pregunta ===========================> ", New);
 		!selectb(New,NewAns);
-		//chat(NewAns);
 		.send(juan,tell,question(NewAns));
-        /* TODO: Manejar confirmación en preguntas no almacenadas */
 		.wait(4000);
-	
 }.
 
 +!level1 <-
@@ -237,7 +236,6 @@ respuesta(1).
 		.println("Pregunta seleccionada: ", Sel," <===============================");
 		.println;
 		!choose(Sel,Ans);
-		//chat(Ans);
 		.send(juan,tell,question(Ans));
 		.wait(2100);
 		.println;
@@ -251,7 +249,6 @@ respuesta(1).
 		.println("servicio seleccionado: ", Sel," <===============================");
 		.println;
 		!chooseb(Sel,Ans);
-		//chat(Ans);
 		.send(juan,tell,question(Ans));
 		.wait(2100);
 		.println;
@@ -265,7 +262,6 @@ respuesta(1).
 		.println("servicios de archivo seleccionado: ", Sel," <===============================");
 		.println;
 		!choosec(Sel,Ans);
-		//chat(Ans);
 		.send(juan,tell,question(Ans));
 		.wait(2100);
 		.println;
@@ -273,11 +269,11 @@ respuesta(1).
 		.println("===========================================");
 	}.	
 	
-/* Manejo de respuestas */
-+answer(Answer) : .substring( "No entendí bien tu pregunta" , Answer ) & not service(Answer,service) <- 
+/* Manejo de respuestas (Paso II) */
++answer(Answer) : .substring( "No entendï¿½ bien tu pregunta" , Answer ) & not service(Answer,service) <- 
 	.println("=============================================");
 	.println;
-	.println("Acabo de recibir de Juanito la contestación ", Answer);
+	.println("Acabo de recibir de Juanito la contestaciï¿½n ", Answer);
 	.println;
 	.println("=============================================");
 	!responder(N,Answer);
@@ -289,7 +285,7 @@ respuesta(1).
 +answer(Answer) : .substring( "Recibido dime tu nombre y materia" , Answer ) & not service(Answer,service) <- 
 	.println("=============================================");
 	.println;
-	.println("Acabo de recibir de Juanito la contestación ", Answer);
+	.println("Acabo de recibir de Juanito la contestaciï¿½n ", Answer);
 	.println;
 	.send(juan,tell,question(" Angel y materia SI "));
 	.println("=============================================");
@@ -301,7 +297,7 @@ respuesta(1).
 +answer(Answer) : .substring( "Recibido dime tu nombre grupo y materia" , Answer ) & not service(Answer,service) <- 
 	.println("=============================================");
 	.println;
-	.println("Acabo de recibir de Juanito la contestación ", Answer);
+	.println("Acabo de recibir de Juanito la contestaciï¿½n ", Answer);
 	.println;
 	.send(juan,tell,question(" Angel al grupo 4 de SI "));
 	.println("=============================================");
@@ -313,7 +309,7 @@ respuesta(1).
 +answer(Answer) : .substring( "Recibido dime tu nombre el seminario y el dia" , Answer ) & not service(Answer,service) <- 
 	.println("=============================================");
 	.println;
-	.println("Acabo de recibir de Juanito la contestación ", Answer);
+	.println("Acabo de recibir de Juanito la contestaciï¿½n ", Answer);
 	.println;
 	.send(juan,tell,question(" Angel y el seminario 30b a las 3 del lunes "));
 	.println("=============================================");
@@ -325,7 +321,7 @@ respuesta(1).
 +answer(Answer) : .substring( "Recibido dime tu nombre y la empresa elegida" , Answer ) & not service(Answer,service) <- 
 	.println("=============================================");
 	.println;
-	.println("Acabo de recibir de Juanito la contestación ", Answer);
+	.println("Acabo de recibir de Juanito la contestaciï¿½n ", Answer);
 	.println;
 	.send(juan,tell,question(" Angel con la empresa Imatia "));
 	.println("=============================================");
@@ -337,7 +333,7 @@ respuesta(1).
 +answer(Answer) : .substring( "Recibido dime tu nombre y el tfg elegido" , Answer ) & not service(Answer,service) <- 
 	.println("=============================================");
 	.println;
-	.println("Acabo de recibir de Juanito la contestación ", Answer);
+	.println("Acabo de recibir de Juanito la contestaciï¿½n ", Answer);
 	.println;
 	.send(juan,tell,question(" Angel con tfg pollito"));
 	.println("=============================================");
@@ -349,7 +345,7 @@ respuesta(1).
 +answer(Answer) : .substring( "Recibido dime tu nombre y la tematica" , Answer ) & not service(Answer,service) <- 
 	.println("=============================================");
 	.println;
-	.println("Acabo de recibir de Juanito la contestación ", Answer);
+	.println("Acabo de recibir de Juanito la contestaciï¿½n ", Answer);
 	.println;
 	.send(juan,tell,question(" Angel con tematica pollito lindo"));
 	.println("=============================================");
@@ -361,7 +357,7 @@ respuesta(1).
 +answer(Answer) : .substring( "Recibido dime tu nombre dni y la tematica del tfg" , Answer ) & not service(Answer,service) <- 
 	.println("=============================================");
 	.println;
-	.println("Acabo de recibir de Juanito la contestación ", Answer);
+	.println("Acabo de recibir de Juanito la contestaciï¿½n ", Answer);
 	.println;
 	.send(juan,tell,question(" Angel con dni 17374938V y tematica pollito lindo"));
 	.println("=============================================");
@@ -373,20 +369,20 @@ respuesta(1).
 +answer(Answer) : .substring( "Recibido dime tu nombre y la materia" , Answer ) & not service(Answer,service) <- 
 	.println("=============================================");
 	.println;
-	.println("Acabo de recibir de Juanito la contestación ", Answer);
+	.println("Acabo de recibir de Juanito la contestaciï¿½n ", Answer);
 	.println;
 	.send(juan,tell,question(" Angel y materia SI"));
 	.println("=============================================");
 	.println;
 	.wait(400).
 	
-+answer(Answer) : not .substring( "No entendí bien tu pregunta" , Answer ) & not service(Answer,Service) <- 
++answer(Answer) : not .substring( "No entendï¿½ bien tu pregunta" , Answer ) & not service(Answer,Service) <- 
 	?respuesta(N);
 	-+respuesta(N+1);
 	+respuesta(N,Answer);
 	.println("=============================================");
 	.println;
-	.println("Acabo de recibir de Juanito la contestación ", N, " : ", Answer);
+	.println("Acabo de recibir de Juanito la contestaciï¿½n ", N, " : ", Answer);
 	.wait(300);
 	.println;
 	.println("=============================================").	

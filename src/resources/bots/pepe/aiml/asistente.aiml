@@ -892,7 +892,7 @@ Hola <star/>, <srai>ES ALUMNO <star/> DE <star index="2"/> </srai> <star index="
 
 </category>
 
-<!--1º Alta en materia anexo 2  --> 
+<!--1º Alta en materia Anexo II  --> 
 
 <category>
 <pattern>$quiero solicitar un alta en faitic</pattern>
@@ -913,7 +913,7 @@ Hola <star/>, <srai>ES ALUMNO <star/> DE <star index="2"/> </srai> <star index="
 </template>
 </category>
 
-<!--2º cambio de grupo anexo 2  --> 
+<!--2º cambio de grupo Anexo II  --> 
 
 <category>
 <pattern>$quiero solicitar un cambio de grupo reducido</pattern>
@@ -976,7 +976,7 @@ Hola <star/>, <srai>ES ALUMNO <star/> DE <star index="2"/> </srai> <star index="
 </template>
 </category>
 
-<!-- 5º solicitar un Tfg entre los propuestos -->
+<!-- 5º solicitar un TFG entre los propuestos -->
 
 
 <category>
@@ -998,7 +998,7 @@ Hola <star/>, <srai>ES ALUMNO <star/> DE <star index="2"/> </srai> <star index="
 </template>
 </category>
 
-<!-- 6º solicitar un Tfg no propuesto -->
+<!-- 6º solicitar un TFG no propuesto -->
 
 <category>
 <pattern>$quiero proponer un tfg</pattern>
@@ -1019,7 +1019,7 @@ Hola <star/>, <srai>ES ALUMNO <star/> DE <star index="2"/> </srai> <star index="
 </template>
 </category>
 
-<!-- 7º solicitar defensa de Tfg -->
+<!-- 7º solicitar defensa de TFG -->
 
 <category>
 <pattern>$quiero solicitar la defensa de mi tfg</pattern>
@@ -1040,7 +1040,7 @@ Hola <star/>, <srai>ES ALUMNO <star/> DE <star index="2"/> </srai> <star index="
 </template>
 </category>
 
-<!-- 8º solicitar evaluacion por compensacion de una materia -->
+<!-- 8º solicitar evaluación por compensación de una materia -->
 
 <category>
 <pattern>$quiero solicitar una evaluacion por compensacion</pattern>
@@ -1070,10 +1070,10 @@ Hola <star/>, <srai>ES ALUMNO <star/> DE <star index="2"/> </srai> <star index="
 </template>
 </category>
 
-<!-- añadir texto a file -->
+<!-- Añadir texto a un archivo -->
 
 <category>
-<pattern>$añade al archivo * el texto *</pattern>
+<pattern>$inserta al archivo * el texto *</pattern>
 <template>
 	<addtxt><txt><star index="2"/></txt> to <file><star/></file></addtxt>
 </template>

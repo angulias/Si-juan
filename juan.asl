@@ -1,5 +1,5 @@
   
-// Agent juan in project prueba.mas2j
+// Agent Juan
 
 +!eliminar <- .abolish(question(H)); !eliminar.
 +!eliminar.
